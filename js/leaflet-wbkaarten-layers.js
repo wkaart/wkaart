@@ -465,7 +465,7 @@ const sluizenrws = {
 				var title = sluizenrws.layer.getPropertyTitle(clave);
 				popup += '<b>'+title+'</b><br />'+feature.properties[clave]+'<br />';
 			}
-//			layer.bindPopup(popup);
+			layer.bindPopup(popup);
 			layer.bindTooltip(popup);
 		},
 		pointToLayer: function (feature, latlng) {
@@ -511,6 +511,7 @@ const Sluizen = {
 				popup += '<b>'+title+'</b><br />'+feature.properties[clave]+'<br />';
 			}
 			layer.bindTooltip(popup);
+			layer.bindPopup(popup);
 		},
 		pointToLayer: function (feature, latlng) {
 			return L.circleMarker(latlng, {
