@@ -208,7 +208,7 @@ const KM = {
 		minZoom: 8,
 		maxZoom: 14,   
 		transparent: 'true',
-		opacity: 0.8,
+		opacity: 0.65,
 		format: 'image/png'
 	}),
 };
@@ -289,7 +289,7 @@ const N2000 = {
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/natura2000/wms?',{
 		layers: 'natura2000',
 		version: '1.3.0',
-		opacity: 0.8, 	
+		opacity: 0.65, 	
 		transparent: 'true',
 		format: 'image/png'
 	}),
