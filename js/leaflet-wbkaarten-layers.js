@@ -594,7 +594,7 @@ const stuwen = {
 			}
 			layer.bindTooltip(popup);
 			layer.bindPopup(popup);
-			layer.setStyle ({weight:9, color: '#e032e6'});
+			layer.setStyle ({weight:9, color: '#1a1aff'});
 		},
 		firstLineTitles: true,
 		debug: true,
