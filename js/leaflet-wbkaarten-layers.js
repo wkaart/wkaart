@@ -405,7 +405,7 @@ const Inun_HWS_mid = {
 };
 const InunMid = {
 	id: 'InunMid',
-	name: "V: Inundatie kans mid <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/2'>(i)</a>",
+	name: "V: Inundatie kans middelgroot <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/2'>(i)</a>",
 	layer: L.layerGroup([Inun_HWS_mid.layer, Inun_reg_mid.layer]),
 };
 const InunMax = {
