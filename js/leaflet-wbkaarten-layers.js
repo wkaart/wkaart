@@ -41,6 +41,20 @@ const OpenTopo = {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
 };  
+const LuFoZ = {
+	id: 'LuFoZ',
+	name: 'A: Luchtfoto zomer (25cm)',
+	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:28992/{z}/{x}/{y}.jpeg',{
+				attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
+	}),
+};
+const LuFoW = {
+	id: 'LuFoW',
+	name: 'A: Luchtfoto winter (8cm)',
+	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_orthoHR/EPSG:28992/{z}/{x}/{y}.jpeg',{
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
+	}),
+};
 const NoBase = {
 	id: 'NoBase',
 	name: 'Geen achtergrond',
