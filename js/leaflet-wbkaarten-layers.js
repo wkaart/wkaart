@@ -180,9 +180,9 @@ const RWSdis = {
 //Layers voor achtergrondkaarten
 const LuFo = {
 	id: 'LuFo',
-	name: 'A: Luchtfoto',
+	name: 'A: Luchtfoto transparant',
 	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:28992/{z}/{x}/{y}.jpeg',{
-		opacity: 0.6,
+		opacity: 0.55,
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
 };
