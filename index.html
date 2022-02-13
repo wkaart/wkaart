@@ -39,7 +39,7 @@
 <script>
 // Define the layers to be used (set in other js files)
 const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, GrRWSWwerken, LuFo, KM, Terrein, LabGeb, LabHoog, AHN3, FysGeo, stuwentot, SPI1, SPI3, SPI6, N2000, NNN, Wetlands, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
-const baselayerlist = [BRTw, BRTgr, OpenTopoA, OpenTopo, NoBase]
+const baselayerlist = [BRTw, BRTgr, OpenTopoA, OpenTopo, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
 //Check if coordinates and zoom level are in url, otherwise use default
@@ -101,6 +101,8 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		'BRT Grijs': BRTgr.layer,
 		'OpenTopo achtergrond': OpenTopoA.layer,
 		'OpenTopo': OpenTopo.layer,
+		'Luchtfoto zomer (25cm)': LuFoZ.layer,
+		'Luchtfoto winter (8cm)': LuFoW.layer,
 		'Geen achtergrond': L.tileLayer(''),
 	};
 	
