@@ -216,13 +216,12 @@ const Terrein = {
 const KM = {
 	id: 'KM',
 	name: 'A: Kilometrering',
-	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/nwb_vaarwegen/ows?SERVICE=WMS&',{
-		layers: 'kilometermarkeringen',
-	//	style: 'kmmarkeringen_met_labels', 
+	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/rws_legger_2_0/ows?SERVICE=WMS&',{
+		layers: 'kilometrering_legger_2_0',
 		minZoom: 8,
 		maxZoom: 14,   
 		transparent: 'true',
-		opacity: 0.65,
+		opacity: 0.75,
 		format: 'image/png'
 	}),
 };
