@@ -649,3 +649,90 @@ const stuwentot = {
 	name: 'KW: Stuwen',
 	layer: L.layerGroup([stuwen.layer, stuwenWS.layer]),
 };
+//Drinkwater inname locaties - eerst symbolen dan locaties
+var cm_dw_options = {
+	weight: 2,
+	opacity: 1,
+	fillOpacity: 1,
+	fillColor: '#bfcfd9',
+	color: '#1c2931'
+};
+L.Icon.Default.prototype.options.iconSize = [18,30];	
+var DWIconSmall = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [17, 29],
+  iconAnchor: [9, 29],
+  popupAnchor: [1, -34],
+  shadowSize: [29, 29]
+});
+var DWIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [20, 35],
+  iconAnchor: [10, 34],
+  popupAnchor: [1, -14],
+  shadowSize: [31, 31]
+});
+var DWIconTiny = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [13, 21],
+  iconAnchor: [6, 21],
+  popupAnchor: [1, -14],
+  shadowSize: [21, 21]
+});
+var DW_BIconSmall = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [17, 29],
+  iconAnchor: [9, 29],
+  popupAnchor: [1, -34],
+  shadowSize: [29, 29]
+});
+var DW_BIconTiny = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [13, 21],
+  iconAnchor: [6, 21],
+  popupAnchor: [1, -14],
+  shadowSize: [21, 21]
+});
+var DW_NoodIconTiny = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [13, 21],
+  iconAnchor: [6, 21],
+  popupAnchor: [1, -14],
+  shadowSize: [21, 21]
+});
+var  	popup = "<b>Waternet </b><a target='_blank' href='https://www.waternet.nl/service-en-contact/drinkwater/waar-komt-ons-drinkwater-vandaan/loenderveense-plas/'>Nieuwersluis </a> <br> Water gaat naar de Waterleidingplas.<br> Wanneer Bethunepolder niet voldoende levert.",
+	ARK = L.marker([52.204399,5.001658], {icon:DW_BIconTiny}).bindPopup(popup).bindTooltip(popup),
+//	Nieuwegein = L.circleMarker([52.022432, 5.112797], cm_dw_options).setRadius(8).bindPopup('WRK Nieuwegein'),
+		popup = "<b>Waternet </b><a target='_blank' href='https://www.waternet.nl/service-en-contact/drinkwater/waar-komt-ons-drinkwater-vandaan/loenderveense-plas/'>Bethunepolder</a>  <br> Water gaat naar de Waterleidingplas<br> tot 29 miljoen m3/jr",
+	Beth = L.marker([52.156479,5.04672], {icon:DWIconSmall}).bindPopup(popup).bindTooltip(popup),
+		popup = "<a target='_blank' href='https://www.waternet.nl/service-en-contact/drinkwater/waar-komt-ons-drinkwater-vandaan/wrk/'><b>Waternet en PWN</b></a> - Nieuwegein <br> Water gaat naar Amsterdamse waterduinen<br> tot 78 miljoen m3/jr",
+	Nieuwegein = L.marker([52.022432, 5.112797], {icon:DWIcon}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>Evides</b> Haringvliet<br> ~6,6 miljoen m3/jr",
+	Haringvliet = L.marker([51.753083,4.223007],{icon:DWIconTiny}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>WB Groningen</b> de Punt <br> ~7 miljoen m3/jr",	
+	dePunt = L.marker([53.13127, 6.619227], {icon:DWIconTiny}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>WML</b><a target='_blank' href='https://www.heemkringheel.nl/drinkwater'> Heel</a> <br> Water gaat naar de Lange Vlieter <br> ~20 miljoen m3/jr, vooral winter",	
+	Heel = L.marker([51.187462, 5.927308], {icon:DWIconSmall}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>PWN</b> Andijk <br> tot 86 miljoen m3/jr",	
+	Andijk = L.marker([52.752718, 5.233081], {icon:DWIcon}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>Dunea</b> Brakel <a target='_blank' href='https://www.dunea.nl/drinkwater/bronnen-en-strategie/afgedamde-maas'>Afgedamde Maas</a><br>Water gaat naar duinen Zuid-Holland<br> tot 85 miljoen m3/jr",	
+	Brakel = L.marker([51.793392, 5.0539595], {icon:DWIcon}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>Dunea</b> Bergambacht Lek <br> Als Afgedamde Maas niet kan leveren<br> Vergund 55 miljoen m3/jr",	
+	DuneaLek = L.marker([51.918654, 4.772429], {icon:DW_BIconSmall}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>Evides</b> Bergsche Maas <br> tot 185 miljoen m3/jr",	
+	Evides = L.marker([51.717263, 4.848989], {icon:DWIcon}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>Evides</b> noodinlaat Berenplaat",	
+	Bplaat = L.marker([51.839112,4.421228], {icon:DW_NoodIconTiny}).bindPopup(popup).bindTooltip(popup),
+		popup = "<b>Evides</b> noodinlaat Wantij",	
+	Wantij = L.marker([51.808052, 4.725877], {icon:DW_NoodIconTiny}).bindPopup(popup).bindTooltip(popup);
+const DrinkW = {
+	id: 'DrinkW',
+	name: "Wb: Drinkwater oppervlaktewater <a target='_blank' href='https://www.drinkwaterplatform.nl/waar-komt-ons-kraanwater-vandaan/'>(i)</a>",
+	layer: L.layerGroup([ARK, Nieuwegein, Haringvliet, dePunt, Heel, Andijk, Beth, Brakel, DuneaLek, Evides, Bplaat, Wantij]),
+};
