@@ -38,7 +38,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, GrRWSWwerken, LuFo, KM, Terrein, LabGeb, LabHoog, AHN3, FysGeo, stuwentot, SPI1, SPI3, SPI6, N2000, NNN, Wetlands, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, GrRWSWwerken, LuFo, KM, Terrein, LabGeb, LabHoog, AHN3, FysGeo, stuwentot, DrinkW, SPI1, SPI3, SPI6, N2000, NNN, Wetlands, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, OpenTopoA, OpenTopo, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -127,6 +127,7 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[N2000.name] : N2000.layer,		
 		[NNN.name] : NNN.layer,	
 		[Wetlands.name] : Wetlands.layer,
+		[DrinkW.name] : DrinkW.layer,
 		[SPI1.name] : SPI1.layer,
 		[SPI3.name] : SPI3.layer,		
 		[SPI6.name] : SPI6.layer,
