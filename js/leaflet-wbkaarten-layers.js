@@ -502,7 +502,7 @@ const sluizenrws = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'http://localhost:8000/data/sluizenrws.csv',
+	url:'data/sluizenrws.csv',
    error: function() {
      alert('No se pudieron cargar los datos');
    },
@@ -547,7 +547,7 @@ const Sluizen = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'http://localhost:8000/data/sluizen.csv',
+	url:'data/sluizen.csv',
    error: function() {
      alert('Gegevens niet gevonden');
    },
@@ -585,7 +585,7 @@ const svk_keer = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'http://localhost:8000/data/svk_keerschuiven.csv',
+	url:'data/svk_keerschuiven.csv',
    error: function() {
      alert('Gegevens niet gevonden');
    },
@@ -622,7 +622,7 @@ const stuwen = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'http://localhost:8000/data/stuwgroot.csv',
+	url:'data/stuwgroot.csv',
    error: function() {
      alert('Gegevens niet gevonden');
    },
