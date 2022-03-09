@@ -1,4 +1,3 @@
- 
 var RD = new L.Proj.CRS(
     'EPSG:28992','+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +towgs84=565.2369,50.0087,465.658,-0.406857330322398,0.350732676542563,-1.8703473836068,4.0812 +no_defs', {    
 origin: [-285401.920, 903401.920],
@@ -63,7 +62,7 @@ const NoBase = {
 //Layers voor grenzen
 const Prov = {
 	id: 'Prov',
-	name: 'G: Provincies', 
+	name: '<i>G: Provincies', 
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/ows?SERVICE=WMS', {
 		layers: 'cbsgebiedsindelingen:cbs_provincie_2021_gegeneraliseerd',
 		minZoom: 2,
@@ -98,13 +97,13 @@ const gem_labels = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsg
 //Layergroup voor gemeenten met label
 const GemMetLab = {
 	id: 'GemMetLab',
-	name: 'G: Gemeenten',
+	name: '<i>G: Gemeenten',
 	layer: L.layerGroup([gem, gem_labels]),
 };
 //Waterschappen van: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/684ff4f6-1652-45a8-93f0-8e16d37b2a66
 const GrWS = {
 	id: 'GrWS',
-	name: 'G: Waterschappen',
+	name: '<i>G: Waterschappen',
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/hwh/eenheden/wms/v1_0?',{
 		layers: 'AU.AdministrativeUnit',
 		transparent: 'true',
@@ -138,12 +137,12 @@ const VR_labels = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsge
 //Layergroup voor veiligheidsregio met label
 const VRenLab = {
 	id: 'VRenLab',
-	name: 'G: Veiligheidsregios',
+	name: '<i>G: Veiligheidsregios',
 	layer: L.layerGroup([VR, VR_labels]),
 };
 const GrRWSKwan = {
 	id: 'GrRWSKwan',
-	name: "G: RWS Kwantiteit <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/cdbea91f-e76c-494a-921d-7a1e75a2d5f9'>(i)</a>", 
+	name: "<i>G: RWS Kwantiteit <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/cdbea91f-e76c-494a-921d-7a1e75a2d5f9'>(i)</a>", 
 	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/waterbeheergrenzen/ows?',{
 	layers: 'waterkwantiteit', 
 	opacity: 0.3, 
@@ -154,7 +153,7 @@ const GrRWSKwan = {
 };
 const GrRWSWwerken = {
 	id: 'GrRWSWwerken',
-	name: "G: RWS Waterstaatkundig beheer <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/19a51337-8c9d-4386-b861-d4876e8f93ad'>(i)</a>", 
+	name: "<i>G: RWS Waterstaatkundig beheer <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/19a51337-8c9d-4386-b861-d4876e8f93ad'>(i)</a>", 
 	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/waterbeheergrenzen/ows?',{
 	layers: 'waterstaatswerken', 
 	opacity: 0.6, 
@@ -165,7 +164,7 @@ const GrRWSWwerken = {
 };
 const RWSdis = {
     id: 'RWSdis',
-	name: "G: RWS districten <a target='_blank' href='Images/VWMadelingen_RWSdistricten.png'>(met VWM)</a>",
+	name: "<i>G: RWS districten <a target='_blank' href='Images/VWMadelingen_RWSdistricten.png'>(met VWM)</a>",
 	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/regiogebieden_rijkswaterstaat/ows?',{
 		layers: 'rijkswaterstaat_districten_nat', 
 		service: 'WMS',
@@ -216,6 +215,9 @@ const Terrein = {
 const KM = {
 	id: 'KM',
 	name: 'A: Kilometrering',
+//	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/nwb_vaarwegen/ows?SERVICE=WMS&',{
+//		layers: 'kilometermarkeringen',
+	//	style: 'kmmarkeringen_met_labels', 
 	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/rws_legger_2_0/ows?SERVICE=WMS&',{
 		layers: 'kilometrering_legger_2_0',
 		minZoom: 8,
@@ -228,7 +230,7 @@ const KM = {
 //Layers voor themas
 const AHN3 = {
 	id: 'AHN3',
-	name: 'T: Hoogte (AHN)',
+	name: "<h style='color:brown;'>T: Hoogte (AHN)",
 	layer: L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/ahn3_5m_dsm/EPSG:28992/{z}/{x}/{y}.png', {
 		minZoom: 1,
 		maxZoom: 19,
@@ -240,7 +242,7 @@ const AHN3 = {
 };	
 const FysGeo = {
 	id: 'FysGeo',
-	name: "T: Fysisch geografische regios <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/c8b5668f-c354-42f3-aafc-d15ae54cf170?tab=general'>(i)</a>",
+	name: "<h style='color:brown;'>T: Fysisch geografische regios <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/c8b5668f-c354-42f3-aafc-d15ae54cf170?tab=general'>(i)</a>",
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/fysischgeografischeregios/wms?',{
 		layers: 'fysischgeografischeregios',
 		transparent: 'true',
@@ -250,7 +252,7 @@ const FysGeo = {
 };
 const LabHoog = {
 	id: 'LabHoog',
-	name: 'T: Hoogtepunten',
+	name: "<h style='color:brown;'>T: Hoogtepunten",
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/top10nlv2/ows?',{
 		layers: 'hoogtepuntlabel',
 		minZoom: 9,
@@ -264,7 +266,7 @@ const LabHoog = {
 //Layers voor droogte
 const SPI1 = {
     id: 'SPI1',
-	name: "Wb: SPI-1 <a target='_blank' href='http://knmi-spi-monitor-frontend-prd.s3-website-eu-west-1.amazonaws.com/'>(i)</a>",
+	name: "<h style='color:darkblue;'>Wb: SPI-1 <a target='_blank' href='http://knmi-spi-monitor-frontend-prd.s3-website-eu-west-1.amazonaws.com/'>(i)</a>",
 	layer: L.tileLayer.wms('https://adaguc-server-spi-monitor.pub.knmi.cloud//wms?DATASET=NL_SPI',{
 		layers: 'spi_daily_spi1',
 		styles: 'spi/nearest',
@@ -275,7 +277,7 @@ const SPI1 = {
 };
 const SPI3 = {
     id: 'SPI3',
-	name: "Wb: SPI-3 <a target='_blank' href='http://knmi-spi-monitor-frontend-prd.s3-website-eu-west-1.amazonaws.com/'>(i)</a>",
+	name: "<h style='color:darkblue;'>Wb: SPI-3 <a target='_blank' href='http://knmi-spi-monitor-frontend-prd.s3-website-eu-west-1.amazonaws.com/'>(i)</a>",
 	layer: L.tileLayer.wms('https://adaguc-server-spi-monitor.pub.knmi.cloud//wms?DATASET=NL_SPI',{
 		layers: 'spi_daily_spi3',
 		styles: 'spi/nearest',
@@ -286,7 +288,7 @@ const SPI3 = {
 };
 const SPI6 = {
     id: 'SPI6',
-	name: "Wb: SPI-6 <a target='_blank' href='http://knmi-spi-monitor-frontend-prd.s3-website-eu-west-1.amazonaws.com/'>(i)</a>",
+	name: "<h style='color:darkblue;'>Wb: SPI-6 <a target='_blank' href='http://knmi-spi-monitor-frontend-prd.s3-website-eu-west-1.amazonaws.com/'>(i)</a>",
 	layer: L.tileLayer.wms('https://adaguc-server-spi-monitor.pub.knmi.cloud//wms?DATASET=NL_SPI',{
 		layers: 'spi_daily_spi6',
 		styles: 'spi/nearest',
@@ -298,7 +300,7 @@ const SPI6 = {
 //Layers voor natuur
 const N2000 = {
     id: 'N2000',
-	name: "N: Natura2000 <a target='_blank' href='https://www.natura2000.nl/gebieden'>(i)</a>",
+	name: "<h style='color:green;'>N: Natura2000</h> <a target='_blank' href='https://www.natura2000.nl/gebieden'>(i)</a>",
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/natura2000/wms?',{
 		layers: 'natura2000',
 		version: '1.3.0',
@@ -309,7 +311,7 @@ const N2000 = {
 };
 const NNN = {
     id: 'NNN',
-	name: "N: Natuurnetwerk Nederland <a target='_blank' href='https://www.atlasleefomgeving.nl/natuurnetwerk-nederland-ehs'>(i)</a>",
+	name: "<h style='color:green;'>N: Natuurnetwerk Nederland</h> <a target='_blank' href='https://www.atlasleefomgeving.nl/natuurnetwerk-nederland-ehs'>(i)</a>",
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/provincies/ps/wms/v1?',{
 		layers: 'PS.ProtectedSite.nlps-nnn',
 		version: '1.3.0',
@@ -320,7 +322,7 @@ const NNN = {
 };
 const Wetlands = {
     id: 'Wetlands',
-	name: "N: Wetlands <a target='_blank' href='https://www.natuurgegevens.nl/node/38'>(i)</a>",
+	name: "<h style='color:green;'>N: Wetlands</h> <a target='_blank' href='https://www.natuurgegevens.nl/node/38'>(i)</a>",
 	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/wetlands/wms?',{
 		layers: 'wetlands',
 		version: '1.3.0',
@@ -332,7 +334,7 @@ const Wetlands = {
 //Layers voor waterveiligheid
 const KerRWSreg = {
 	id: 'KerRWSreg',
-	name: "V: Keringen regionaal RWS <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/231de5bc-9a79-43dd-aad9-c3d821228b1c?tab=relations'>(i)</a>",
+	name: "<h style='color:red;'>V: Keringen regionaal RWS </h><a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/231de5bc-9a79-43dd-aad9-c3d821228b1c?tab=relations'>(i)</a>",
 	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/regionale_keringen/ows?',{
 		layers: 'regionale_keringen_rws', 
 		service: 'WMS',
@@ -345,7 +347,7 @@ const KerRWSreg = {
 };
 const KerPrim = {
 	id: 'KerPrim',
-	name: "V: Keringen primair (sign.) <a target='_blank' href='https://waterveiligheidsportaal.nl/#/nss/nss/norm'>(i)</a>",
+	name: "<h style='color:red;'>V: Keringen primair (sign.) <a target='_blank' href='https://waterveiligheidsportaal.nl/#/nss/nss/norm'>(i)</a>",
     layer: L.tileLayer.wms('https://waterveiligheidsportaal.nl/geoserver/nbpw/ows?SERVICE=WMS&',{
 		layers: 'dijktrajecten', 
 		style: 'NBPW_signaleringswaarde',
@@ -359,7 +361,7 @@ const KerPrim = {
 };
 const KerWS = {
 	id: 'KerWS',
-	name: "V: Keringen waterschappen <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/e55d0ae4-fd31-440f-8faa-9e28dcc7a5a5'>(i)</a>",
+	name: "<h style='color:red;'>V: Keringen waterschappen <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/e55d0ae4-fd31-440f-8faa-9e28dcc7a5a5'>(i)</a>",
     layer: L.tileLayer.wms('https://service.pdok.nl/hwh/keringenimwa/wms/v1_0?',{
 		layers: 'waterkering', 
 		version: '1.3.0',
@@ -372,7 +374,7 @@ const KerWS = {
 };
 const WBerging = {
 	id: 'WBerging',
-	name: "V: Waterbergingsgebieden <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/f06984ba-5e3c-4fa6-9078-a69617122d67'>(i)</a>",
+	name: "<h style='color:red;'>V: Waterbergingsgebieden <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/f06984ba-5e3c-4fa6-9078-a69617122d67'>(i)</a>",
     layer: L.tileLayer.wms('https://service.pdok.nl/hwh/oppwaterimwa/wms/v1_0?',{
 		layers: 'Waterbergingsgebied', 
 //		version: '1.3.0',
@@ -382,7 +384,7 @@ const WBerging = {
 };
 const Inun_reg_mid = {
 	id: 'Inun_reg_mid',
-	name: "V: Overstroombaar middelgrote kans <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/5'>(i)</a>",
+	name: "<h style='color:red;'>V: Overstroombaar middelgrote kans <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/5'>(i)</a>",
     layer: L.tileLayer.wms('https://geodata.basisinformatie-overstromingen.nl/geoserver/LIWO_Basis/ows?SERVICE=WMS&',{
 		layers: 'MaximaleWaterdiepte_D_RegionaalOnbeschermd_Kaart2', 
 //		version: '1.3.0',
@@ -404,12 +406,12 @@ const Inun_HWS_mid = {
 };
 const InunMid = {
 	id: 'InunMid',
-	name: "V: Inundatie kans middelgroot <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/2'>(i)</a>",
+	name: "<h style='color:red;'>V: Inundatie kans middelgroot <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/2'>(i)</a>",
 	layer: L.layerGroup([Inun_HWS_mid.layer, Inun_reg_mid.layer]),
 };
 const InunMax = {
 	id: 'InunMax',
-	name: "V: Overstroombaar maximaal <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/9'>(i)</a>",
+	name: "<h style='color:red;'>V: Overstroombaar maximaal <a target='_blank' href='https://basisinformatie-overstromingen.nl/#/viewer/9'>(i)</a>",
     layer: L.tileLayer.wms('https://geodata.basisinformatie-overstromingen.nl/geoserver/LIWO_Basis/ows?SERVICE=WMS&',{
 		layers: 'Overstroomik_opvullen_combined', 
 //		version: '1.3.0',
@@ -421,7 +423,7 @@ const InunMax = {
 //Lagen voor vaarwegen
 const Bevaar = {
 	id: 'Bevaar',
-	name: "Vw: Bevaarbaarheid <a target='_blank' href='https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarweginformatie/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=vaarweginformatie%3Abevaarbaarheid' >(i)</a>",
+	name: "<h style='color:orange;'>Vw: Bevaarbaarheid <a target='_blank' href='https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarweginformatie/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=vaarweginformatie%3Abevaarbaarheid' >(i)</a>",
     layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarweginformatie/ows?SERVICE=WMS&',{
 		layers: 'bevaarbaarheid', 
 		version: '1.3.0',
@@ -431,21 +433,21 @@ const Bevaar = {
 		format: 'image/png'
 	}),
 };
-//const Sluizen = {
-//	id: 'Sluizen',
-//	name: "KW: Sluizen <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/db781c99-29fd-492c-9b2d-29fcf9295f2c?tab=general'>(i)</a>",
-//    layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarweginformatie/ows?SERVICE=WMS&',{
-//		layers: 'sluis', 
-//		version: '1.3.0',
-//		minZoom: 1,
-//		maxZoom: 19,   
-//		transparent: 'true',
-//		format: 'image/png'
-//	}),
-//};
+const SluizenW = {
+	id: 'SluizenW',
+	name: "KW: Sluizen <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/db781c99-29fd-492c-9b2d-29fcf9295f2c?tab=general'>(i)</a>",
+    layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarweginformatie/ows?SERVICE=WMS&',{
+		layers: 'sluis', 
+		version: '1.3.0',
+		minZoom: 1,
+		maxZoom: 19,   
+		transparent: 'true',
+		format: 'image/png'
+	}),
+};
 const MGD = {
 	id: 'MGD',
-	name: "Vw: Trajecten MGDs <a target='_blank' href='https://www.vaarweginformatie.nl/frp/main/#/hydro/mgd'>(i)</a> <a target='_blank' href='Images/MGDs_kaart.jpg'>(k)</a>",
+	name: "<h style='color:orange;'>Vw: Trajecten MGDs <a target='_blank' href='https://www.vaarweginformatie.nl/frp/main/#/hydro/mgd'>(i)</a> <a target='_blank' href='Images/MGDs_kaart.jpg'>(k)</a>",
     layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarweginformatie/ows?SERVICE=WMS&',{
 		layers: 'minst_gepeilde_diepte', 
 		version: '1.3.0',
@@ -457,7 +459,7 @@ const MGD = {
 };
 const VWkaart = {
 	id: 'VWkaart',
-	name: "Vw: Vaarwegenkaart 2013",
+	name: "<h style='color:orange;'>Vw: Vaarwegenkaart 2013",
     layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarwegenkaart/ows?SERVICE=WMS&',{
 		layers: 'vaarwegenkaart',
 		version: '1.3.0',
@@ -470,7 +472,7 @@ const VWkaart = {
 
 const sluizenrws = {
 	id: 'sluizenrws',
-	name: "KW: Sluizen RWS",
+	name: "<h style='color:blue;'>KW: Sluizen RWS",
 	layer: L.geoCsv(null, {
 		onEachFeature: function (feature, layer) {
 			var popup = '';
@@ -500,7 +502,7 @@ const sluizenrws = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'data/sluizenrws.csv',
+	url:'http://localhost:8000/data/sluizenrws.csv',
    error: function() {
      alert('No se pudieron cargar los datos');
    },
@@ -515,7 +517,7 @@ $.ajax ({
 
 const Sluizen = {
 	id: 'Sluizen',
-	name: "KW: Sluizen totaal",
+	name: "<h style='color:blue;'>KW: Sluizen totaal",
 	layer: L.geoCsv(null, {
 		onEachFeature: function (feature, layer) {
 			var popup = '';
@@ -545,7 +547,7 @@ const Sluizen = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'data/sluizen.csv',
+	url:'http://localhost:8000/data/sluizen.csv',
    error: function() {
      alert('Gegevens niet gevonden');
    },
@@ -560,7 +562,7 @@ $.ajax ({
 
 const svk_keer = {
 	id: 'svk_keer',
-	name: 'KW: Stormvlkeringen en keerschuiven',
+	name: "<h style='color:blue;'>KW: Stormvlkeringen en keerschuiven",
 	layer: L.geoCsv(null, {
 		onEachFeature: function (feature, layer) {
 			var popup = '';
@@ -570,7 +572,7 @@ const svk_keer = {
 			}
 			layer.bindTooltip(popup);
 			layer.bindPopup(popup);
-			layer.setStyle ({weight:9, color: '#e6194B'});
+			layer.setStyle ({weight:8, color: '#e6194B'});
 		},
 		firstLineTitles: true,
 		debug: true,
@@ -583,7 +585,7 @@ const svk_keer = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'data/svk_keerschuiven.csv',
+	url:'http://localhost:8000/data/svk_keerschuiven.csv',
    error: function() {
      alert('Gegevens niet gevonden');
    },
@@ -597,7 +599,7 @@ $.ajax ({
 
 const stuwen = {
 	id: 'stuwGroot',
-	name: 'KW: Stuwen in rijkswateren en Vecht',
+	name: "<h style='color:blue;'>KW: Stuwen in rijkswateren en Vecht",
 	layer: L.geoCsv(null, {
 		onEachFeature: function (feature, layer) {
 			var popup = '';
@@ -620,7 +622,7 @@ const stuwen = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'data/stuwgroot.csv',
+	url:'http://localhost:8000/data/stuwgroot.csv',
    error: function() {
      alert('Gegevens niet gevonden');
    },
@@ -645,7 +647,7 @@ const stuwenWS = {
 
 const stuwentot = {
 	id: 'stuwen',
-	name: 'KW: Stuwen',
+	name: "<h style='color:blue;'>KW: Stuwen",
 	layer: L.layerGroup([stuwen.layer, stuwenWS.layer]),
 };
 //Drinkwater inname locaties - eerst symbolen dan locaties
@@ -732,6 +734,6 @@ var  	popup = "<b>Waternet </b><a target='_blank' href='https://www.waternet.nl/
 	Wantij = L.marker([51.808052, 4.725877], {icon:DW_NoodIconTiny}).bindPopup(popup).bindTooltip(popup);
 const DrinkW = {
 	id: 'DrinkW',
-	name: "Wb: Drinkwater oppervlaktewater <a target='_blank' href='https://www.drinkwaterplatform.nl/waar-komt-ons-kraanwater-vandaan/'>(i)</a>",
+	name: "<h style='color:darkblue;'>Wb: Drinkwater oppervlaktewater <a target='_blank' href='https://www.drinkwaterplatform.nl/waar-komt-ons-kraanwater-vandaan/'>(i)</a>",
 	layer: L.layerGroup([ARK, Nieuwegein, Haringvliet, dePunt, Heel, Andijk, Beth, Brakel, DuneaLek, Evides, Bplaat, Wantij]),
 };
