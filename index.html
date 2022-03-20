@@ -149,7 +149,7 @@ lagenaan.forEach(laag => map.addLayer(laag));
 
 if (list) {var layerControl = L.control.layers(baseLayers, overlays).addTo(map)};
 if (scalebar) {L.control.scale({imperial: false}).addTo(map)};
-L.control.locate({maxZoom:15}).addTo(map);
+L.control.locate({locateOptions:{maxZoom:14}}).addTo(map);
 	
 //Update x,y and z in url after map movement
 var UpdateUrlxy= function () {
