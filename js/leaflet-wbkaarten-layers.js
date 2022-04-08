@@ -300,10 +300,8 @@ const SPI6 = {
 const N2000 = {
     id: 'N2000',
 	name: "<h style='color:green;'>N: Natura2000</h> <a target='_blank' href='https://www.natura2000.nl/gebieden'>(i)</a>",
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/natura2000/wms?',{
-		layers: 'natura2000',
-		version: '1.3.0',
-		opacity: 0.65, 	
+	layer: L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/natura2000/EPSG:28992/{z}/{x}/{y}.png', {
+		opacity: 0.7, 	
 		transparent: 'true',
 		format: 'image/png'
 	}),
