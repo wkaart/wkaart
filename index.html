@@ -107,6 +107,9 @@ map.createPane('kerPrimPane');
 map.getPane('kerPrimPane').style.zIndex = 210;
 map.createPane('svk');
 map.getPane('svk').style.zIndex = 630;
+map.createPane('LabelsPane');
+map.getPane('LabelsPane').style.zIndex = 660;
+	
 lagenaan.forEach(laag => map.addLayer(laag));
 
 	var baseLayers = {
