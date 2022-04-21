@@ -306,6 +306,46 @@ const N2000 = {
 		format: 'image/png'
 	}),
 };
+const N2000namen = {
+	id: 'N2000label',
+	name: "<h style='color:blue;'>N: Natura2000 labels",
+	layer: L.geoCsv(null, {
+		onEachFeature: function (feature, layer) {
+			var popup = '';
+			for (var clave in feature.properties) {
+				var title = N2000namen.layer.getPropertyTitle(clave);
+				popup += feature.properties[clave];
+			}
+			layer.bindPopup(popup);
+			layer.bindTooltip(popup, {permanent: true, direction:"center", className: "N2000-labels"}).openTooltip();
+		},
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, {
+				opacity: 0.1,
+				fillOpacity: 0.1,
+				color: '#ffffb4',
+				fillColor: '#4e7389'
+			});
+		},
+		firstLineTitles: true,
+		debug: true,
+		fieldSeparator: ';'
+	}),
+};
+$.ajax ({
+	type:'GET',
+	dataType:'text',
+	url:'http://localhost:8000/data/N2000labels.csv',
+   error: function() {
+     alert('Kan de data niet vinden');
+   },
+	success: function(csv) {
+		N2000namen.layer.addData(csv);
+	},
+   complete: function() {
+      $('#cargando').delay(500).fadeOut('slow');
+   }
+});
 const NNN = {
     id: 'NNN',
 	name: "<h style='color:green;'>N: Natuurnetwerk Nederland</h> <a target='_blank' href='https://www.atlasleefomgeving.nl/natuurnetwerk-nederland-ehs'>(i)</a>",
