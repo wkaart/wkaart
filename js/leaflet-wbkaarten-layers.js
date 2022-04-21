@@ -329,6 +329,7 @@ const N2000namen = {
 		},
 		firstLineTitles: true,
 		debug: true,
+		pane: 'LabelsPane',
 		fieldSeparator: ';'
 	}),
 };
