@@ -30,7 +30,15 @@
     }
     @media (hover: none) {
 	.leaflet-tooltip-pane { display: none; }
-	}	
+	}
+ 	.leaflet-tooltip.N2000-labels {
+		background-color: transparent;
+		border: transparent;
+		box-shadow: none;
+		font-style:italic;
+		color:darkgreen;
+		text-shadow: 0 0 2px #ccffcc;
+	}
     </style>
 <!--- Meta info to prevent controls becoming small on mobile --->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -163,8 +171,16 @@ var UpdateUrlxy= function () {
   params.set('y', currentY);
   window.history.replaceState({}, '', `${location.pathname}?${params}`);
 };
+var UpdateLabels = function () {
+    if (map.getZoom() > 5 && map.hasLayer(N2000.layer)) {
+          N2000namen.layer.addTo(map);
+    } else { 
+        N2000namen.layer.remove();
+    }
+};
 map.on('zoomend moveend', UpdateUrlxy);
-
+map.on('zoomend moveend', UpdateLabels);
+	
 //update list of layers in url after switching layers on or off
 var UpdateUrlLagen= function () {
   const laagnamen = []; 
@@ -179,7 +195,8 @@ var UpdateUrlLagen= function () {
   window.history.replaceState({}, '', `${location.pathname}?${params}`);
 };
 map.on('overlayadd overlayremove', UpdateUrlLagen);
-
+map.on('overlayadd overlayremove', UpdateLabels);
+	
 //update baselayer in url
 var UpdateUrlBase= function () {
   const baselayers = []; 
