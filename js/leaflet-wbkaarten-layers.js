@@ -335,7 +335,7 @@ const N2000namen = {
 $.ajax ({
 	type:'GET',
 	dataType:'text',
-	url:'http://localhost:8000/data/N2000labels.csv',
+	url:'data/N2000labels.csv',
    error: function() {
      alert('Kan de data niet vinden');
    },
