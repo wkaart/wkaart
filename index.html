@@ -163,8 +163,8 @@ var UpdateUrlxy= function () {
   params.set('y', currentY);
   window.history.replaceState({}, '', `${location.pathname}?${params}`);
 };
-map.on('zoomend', UpdateUrlxy);
-map.on('moveend', UpdateUrlxy);
+map.on('zoomend moveend', UpdateUrlxy);
+
 //update list of layers in url after switching layers on or off
 var UpdateUrlLagen= function () {
   const laagnamen = []; 
@@ -178,8 +178,7 @@ var UpdateUrlLagen= function () {
   params.set('lagen',laagnamen);
   window.history.replaceState({}, '', `${location.pathname}?${params}`);
 };
-map.on('overlayadd', UpdateUrlLagen);
-map.on('overlayremove', UpdateUrlLagen);
+map.on('overlayadd overlayremove', UpdateUrlLagen);
 
 //update baselayer in url
 var UpdateUrlBase= function () {
