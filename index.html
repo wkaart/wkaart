@@ -147,10 +147,10 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[AHN3.name]: AHN3.layer,
 		[FysGeo.name]: FysGeo.layer
 	};
-
+// Add controls
 if (list) {var layerControl = L.control.layers(baseLayers, overlays).addTo(map)};
 if (scalebar) {L.control.scale({imperial: false}).addTo(map)};
-L.control.locate({locateOptions:{maxZoom:11}}).addTo(map);
+L.control.locate({locateOptions:{maxZoom:9,enableHighAccuracy: true}}).addTo(map);
 	
 //Update x,y and z in url after map movement
 var UpdateUrlxy= function () {
