@@ -317,7 +317,7 @@ const N2000namen = {
 				popup += feature.properties[clave];
 			}
 			layer.bindPopup(popup);
-			layer.bindTooltip(popup, {permanent: true, direction:"center", className: "N2000-labels"}).openTooltip();
+			layer.bindTooltip(popup, {permanent: true, pane: 'LabelsPane', direction:"center", className: "N2000-labels"}).openTooltip();
 		},
 		pointToLayer: function (feature, latlng) {
 			return L.circleMarker(latlng, {
