@@ -37,7 +37,7 @@
 		box-shadow: none;
 		font-style:italic;
 		color:darkgreen;
-		text-shadow: 0 0 2px #ccffcc;
+		text-shadow:  2px 2px #ccffcc;
 	}
     </style>
 <!--- Meta info to prevent controls becoming small on mobile --->
@@ -181,6 +181,7 @@ var UpdateLabels = function () {
         N2000namen.layer.remove();
     }
 };
+UpdateLabels();
 map.on('zoomend moveend', UpdateUrlxy);
 map.on('zoomend moveend', UpdateLabels);
 	
