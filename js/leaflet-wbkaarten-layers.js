@@ -321,10 +321,10 @@ const N2000namen = {
 		},
 		pointToLayer: function (feature, latlng) {
 			return L.circleMarker(latlng, {
-				opacity: 0.1,
-				fillOpacity: 0.1,
-				color: '#ffffb4',
-				fillColor: '#4e7389'
+				opacity: 0.01,
+				fillOpacity: 0.01,
+				color: 'white',
+				fillColor: 'white'
 			});
 		},
 		firstLineTitles: true,
