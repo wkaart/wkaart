@@ -238,7 +238,49 @@ const AHN3 = {
 		format: 'image/png',
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
-};	
+};
+const NatSys_Hoofd = {
+	id: 'NatSys',
+	name: "<h style='color:brown;'>T: Basiskaart natuurlijk systeem <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/basiskaart-natuurlijk-systeem-nederland'>(i)</a>",
+	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+		layers: 'bknsn_hoofdklasse',
+		transparent: 'true',
+		minZoom: 1,
+		maxZoom: 7,  
+		opacity: 0.35,
+		format: 'image/png',
+		attribution: 'Klimaateffectatlas 2022'
+	}),
+};
+const NatSys_Sub = {
+	id: 'NatSys',
+	name: "<h style='color:brown;'>T: Basiskaart natuurlijk systeem <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/basiskaart-natuurlijk-systeem-nederland'>(i)</a>",
+	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+		layers: 'bknsn_subklasse',
+		transparent: 'true',
+		minZoom: 8,
+		maxZoom: 15,  
+		opacity: 0.4,
+		format: 'image/png',
+		attribution: 'Klimaateffectatlas 2022'
+	}),
+};
+const NatSys = {
+	id: 'NatSys',
+	name: "<h style='color:brown;'>T: Basiskaart natuurlijk systeem <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/basiskaart-natuurlijk-systeem-nederland'>(i)</a>",
+	layer: L.layerGroup([NatSys_Hoofd.layer, NatSys_Sub.layer]),
+};
+const GrasAkker = {
+	id: 'GrasAkker',
+	name: "<h style='color:brown;'>T: Gras en akkerbouw <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/droogtegevoeligheid-natuur'>(i)</a>",
+	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+		layers: 'landbouwgebieden',
+		transparent: 'true',
+		opacity: 0.6,
+		format: 'image/png',
+		attribution: 'Klimaateffectatlas 2022'
+	}),
+};
 const FysGeo = {
 	id: 'FysGeo',
 	name: "<h style='color:brown;'>T: Fysisch geografische regios <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/c8b5668f-c354-42f3-aafc-d15ae54cf170?tab=general'>(i)</a>",
@@ -369,6 +411,17 @@ const Wetlands = {
 		format: 'image/png'
 	}),
 };
+const NatGW_gevoelig = {
+	id: 'NatGW_gevoelig',
+	name: "<h style='color:green;'>N: Grondwaterafhankelijke natuur <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/droogtegevoeligheid-natuur'>(i)</a>",
+	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+		layers: 'droogtegevoeligheidgrondwaterafhankelijkenatuur',
+		transparent: 'true',
+		opacity: 0.7,
+		format: 'image/png',
+		attribution: 'Klimaateffectatlas 2022'
+	}),
+};
 //Layers voor waterveiligheid
 const KerRWSreg = {
 	id: 'KerRWSreg',
@@ -456,6 +509,17 @@ const InunMax = {
 		transparent: 'true',
 		opacity: 0.4,
 		format: 'image/png'
+	}),
+};
+const Water70mm = {
+	id: 'Water70mm',
+	name: "<h style='color:red;'>V: Waterdiepte 70mm/2uur <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/waterdiepte-bij-kortdurende-hevige-neerslag'>(i)</a>",
+	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+		layers: 'waterdiepte_neerslag_70mm_2uur',
+		transparent: 'true',
+		opacity: 0.7,
+		format: 'image/png',
+		attribution: 'Klimaateffectatlas 2022'
 	}),
 };
 //Lagen voor vaarwegen
