@@ -39,6 +39,51 @@ const OpenTopo = {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
 };  
+var BRT = L.tileLayer('https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 3,
+		minZoom: 1
+	});
+var Top1000 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top1000raster/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 5,
+		minZoom: 4
+	});
+var Top500 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top500raster/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 6,
+		minZoom: 6
+	});
+var Top250 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top250raster/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 7,
+		minZoom: 7
+	});
+var Top100 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top100raster/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 8,
+		minZoom: 8
+	});
+var Top50 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top50raster/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 9,
+		minZoom: 9
+	});
+var Top25 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top25raster/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 11,
+		minZoom: 10
+	});
+var Top10NL = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top10nlv2/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 15,
+		minZoom: 12
+	});
+const Topkaarten = {
+	id: 'Topkaarten',
+	name: 'Topkaarten', 
+	layer: L.layerGroup([BRT,Top1000,Top500,Top250,Top100,Top50,Top25,Top10NL]),
+};
 const LuFoZ = {
 	id: 'LuFoZ',
 	name: 'A: Luchtfoto zomer (25cm)',
