@@ -855,7 +855,7 @@ var DW_NoodIconTiny = new L.Icon({
   shadowSize: [21, 21]
 });
 var  	popup = "<b>Waternet </b><a target='_blank' href='https://www.waternet.nl/service-en-contact/drinkwater/waar-komt-ons-drinkwater-vandaan/loenderveense-plas/'>Nieuwersluis </a> <br> Water gaat naar de Waterleidingplas.<br> Wanneer Bethunepolder niet voldoende levert.",
-	ARK = L.marker([52.204399,5.001658], {icon:DW_BIconTiny}).bindPopup(popup).bindTooltip(popup),
+	ARK = L.marker([52.204399,5.001658], {icon:DWIconTiny}).bindPopup(popup).bindTooltip(popup),
 //	Nieuwegein = L.circleMarker([52.022432, 5.112797], cm_dw_options).setRadius(8).bindPopup('WRK Nieuwegein'),
 		popup = "<b>Waternet </b><a target='_blank' href='https://www.waternet.nl/service-en-contact/drinkwater/waar-komt-ons-drinkwater-vandaan/loenderveense-plas/'>Bethunepolder</a>  <br> Water gaat naar de Waterleidingplas<br> tot 29 miljoen m3/jr",
 	Beth = L.marker([52.156479,5.04672], {icon:DWIconSmall}).bindPopup(popup).bindTooltip(popup),
