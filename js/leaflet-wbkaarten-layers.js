@@ -262,8 +262,8 @@ const KM = {
 //	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/nwb_vaarwegen/ows?SERVICE=WMS&',{
 //		layers: 'kilometermarkeringen',
 	//	style: 'kmmarkeringen_met_labels', 
-	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/rws_legger_2_0/ows?SERVICE=WMS&',{
-		layers: 'kilometrering_legger_2_0',
+	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/rws_legger/ows?SERVICE=WMS&',{
+		layers: 'kilometrering_legger',
 		minZoom: 8,
 		maxZoom: 14,   
 		transparent: 'true',
