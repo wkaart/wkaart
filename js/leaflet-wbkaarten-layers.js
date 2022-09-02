@@ -74,7 +74,7 @@ var Top25 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/w
 		maxZoom: 11,
 		minZoom: 10
 	});
-var Top10NL = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top10nlv2/EPSG:28992/{z}/{x}/{y}.png', {
+var Top10NL = L.tileLayer('https://service.pdok.nl/brt/top10nl/wmts/v1_0/top10nl/EPSG:28992/{z}/{x}/{y}.png', {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
 		maxZoom: 15,
 		minZoom: 12
