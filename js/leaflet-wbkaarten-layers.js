@@ -422,6 +422,16 @@ $.ajax ({
       $('#cargando').delay(500).fadeOut('slow');
    }
 });
+const NatCat1 = {
+    id: 'NatCat1',
+	name: "<h style='color:green;'>N: Cat 1 natuur</h> <a target='_blank' href='https://geoservices.portaalnatuurenlandschap.nl/geoserver/IMNa_CAT1/ows?service=WMS&request=GetLegendGraphic&format=image/png&width=20&height=20&layer=imna_cat1_categorie_1_natuurkaart&'>(l)</a> <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search;jsessionid=4AF31F292D4E7347BE909866CCD2435E#/metadata/585690c9-73e1-4a11-a282-b439df7c3c6e?tab=general'>(i)</a>",
+	layer: L.tileLayer.wms('https://geoservices.portaalnatuurenlandschap.nl/geoserver/IMNa_CAT1/ows?SERVICE=WMS&',{
+		layers: 'imna_cat1_categorie_1_natuurkaart',
+		opacity: 0.75, 	
+		transparent: 'true',
+		format: 'image/png'
+	}),
+};
 const NNN = {
     id: 'NNN',
 	name: "<h style='color:green;'>N: Natuurnetwerk Nederland</h> <a target='_blank' href='https://www.atlasleefomgeving.nl/natuurnetwerk-nederland-ehs'>(i)</a>",
