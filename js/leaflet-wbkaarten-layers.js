@@ -232,9 +232,8 @@ const LuFo = {
 const LabGeb = {
 	id: 'LabGeb',
 	name: 'A: Labels polders ea',
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/top10nlv2/ows?',{
-		layers: 'geografischgebiedvlaklabelnaamnl',
-		styles: 'top10nlv2:Geografisch_gebied_vlak_naam_NL_style',
+	layer: L.tileLayer.wms('https://service.pdok.nl/brt/top10nl/wms/v1_0?',{
+		layers: 'geografischgebiedlabelnl',
 		tiled: 'false',
 		tileSize: 2048,
 		minZoom: 9,
@@ -244,18 +243,7 @@ const LabGeb = {
 		format: 'image/png'
 	}),
 };
-const Terrein = {
-	id: 'Terrein',
-	name: 'A: Terrein',
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/top10nlv2/ows?',{
-		layers: 'terreinvlakvoorkomen',
-		minZoom: 9,
-		maxZoom: 19,   
-		transparent: 'true',
-		opacity: 0.8,
-		format: 'image/png'
-	}),
-};
+
 const KM = {
 	id: 'KM',
 	name: 'A: Kilometrering',
@@ -339,8 +327,8 @@ const FysGeo = {
 const LabHoog = {
 	id: 'LabHoog',
 	name: "<h style='color:brown;'>T: Hoogtepunten",
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/top10nlv2/ows?',{
-		layers: 'hoogtepuntlabel',
+	layer: L.tileLayer.wms('https://service.pdok.nl/brt/top10nl/wms/v1_0?',{
+		layers: 'hoogte',
 		minZoom: 9,
 		maxZoom: 19,   
 		transparent: 'true',
