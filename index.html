@@ -60,7 +60,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, GrRWSWwerken, LuFo, KM, LabGeb, LabHoog, AHN3, NatSys, GrasAkker, FysGeo, stuwentot, DrinkW, SPI1, SPI3, SPI6, N2000, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, GrRWSWwerken, LuFo, KM, LabGeb, LabHoog, AHN3, NatSys, GrasAkker, FysGeo, stuwentot, DrinkW, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, OpenTopoA, OpenTopo, Topkaarten, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -152,7 +152,8 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[InunMid.name] : InunMid.layer,
 		[InunMax.name] : InunMax.layer,
 		[Water70mm.name] : Water70mm.layer,
-		[N2000.name] : N2000.layer,		
+		[N2000.name] : N2000.layer,
+		[NatCat1.name] : NatCat1.layer,
 		[NNN.name] : NNN.layer,	
 		[Wetlands.name] : Wetlands.layer,
 		[NatGW_gevoelig.name] : NatGW_gevoelig.layer,
