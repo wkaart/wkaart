@@ -60,7 +60,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, GrRWSWwerken, LuFo, KM, Terrein, LabGeb, LabHoog, AHN3, NatSys, GrasAkker, FysGeo, stuwentot, DrinkW, SPI1, SPI3, SPI6, N2000, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, GrRWSWwerken, LuFo, KM, LabGeb, LabHoog, AHN3, NatSys, GrasAkker, FysGeo, stuwentot, DrinkW, SPI1, SPI3, SPI6, N2000, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, OpenTopoA, OpenTopo, Topkaarten, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -84,7 +84,7 @@ var params = new URLSearchParams(window.location.search);
 	};
   }
   else {
-		lagenaan.push(Terrein.layer, LabGeb.layer, LabHoog.layer);
+		lagenaan.push(LabGeb.layer, LabHoog.layer);
   };
 // check if base layer is set in url, otherwise set default
   if (params.has('basis')) {
@@ -165,7 +165,6 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[VWkaart.name] : VWkaart.layer,
 		[LuFo.name] : LuFo.layer,
 		[KM.name] : KM.layer,
-		[Terrein.name] : Terrein.layer,	
 		[LabGeb.name] : LabGeb.layer,			
 		[LabHoog.name] : LabHoog.layer,
 		[AHN3.name]: AHN3.layer,
