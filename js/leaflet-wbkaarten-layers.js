@@ -223,7 +223,7 @@ const RWSdis = {
 //Layers voor achtergrondkaarten
 const LuFo = {
 	id: 'LuFo',
-	name: 'A: Luchtfoto transparant',
+	name: "<h style='color:brown;'>T: Luchtfoto transparant",
 	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:28992/{z}/{x}/{y}.jpeg',{
 		opacity: 0.55,
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
@@ -231,7 +231,7 @@ const LuFo = {
 };
 const LabGeb = {
 	id: 'LabGeb',
-	name: 'A: Labels polders ea',
+	name: 'L: Labels polders ea',
 	layer: L.tileLayer.wms('https://service.pdok.nl/brt/top10nl/wms/v1_0?',{
 		layers: 'geografischgebiedlabelnl',
 		tiled: 'false',
@@ -246,7 +246,7 @@ const LabGeb = {
 
 const KM = {
 	id: 'KM',
-	name: 'A: Kilometrering',
+	name: 'L: Kilometrering',
 //	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/nwb_vaarwegen/ows?SERVICE=WMS&',{
 //		layers: 'kilometermarkeringen',
 	//	style: 'kmmarkeringen_met_labels', 
