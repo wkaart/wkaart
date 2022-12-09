@@ -316,7 +316,7 @@ const GrasAkker = {
 };
 const LabHoog = {
 	id: 'LabHoog',
-	name: "<h style='color:brown;'>T: Hoogtepunten",
+	name: "L: Hoogtepunten",
 	layer: L.tileLayer.wms('https://service.pdok.nl/brt/top10nl/wms/v1_0?',{
 		layers: 'hoogte',
 		minZoom: 9,
