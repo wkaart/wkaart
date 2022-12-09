@@ -141,6 +141,10 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[RWSdis.name] : RWSdis.layer,
 		[GrRWSKwan.name] : GrRWSKwan.layer,
 		[GrRWSWwerken.name] : GrRWSWwerken.layer,
+		[AHN3.name]: AHN3.layer,
+		[NatSys.name]: NatSys.layer,
+		[GrasAkker.name] : GrasAkker.layer,
+		[LuFo.name] : LuFo.layer,
 		[sluizenrws.name]: sluizenrws.layer,
 		[Sluizen.name] : Sluizen.layer,
 		[svk_keer.name] : svk_keer.layer,
@@ -164,13 +168,9 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[Bevaar.name] : Bevaar.layer,
 		[MGD.name] : MGD.layer,
 		[VWkaart.name] : VWkaart.layer,
-		[LuFo.name] : LuFo.layer,
 		[KM.name] : KM.layer,
 		[LabGeb.name] : LabGeb.layer,			
-		[LabHoog.name] : LabHoog.layer,
-		[AHN3.name]: AHN3.layer,
-		[NatSys.name]: NatSys.layer,
-		[GrasAkker.name] : GrasAkker.layer
+		[LabHoog.name] : LabHoog.layer
 	};
 // Add controls
 if (list) {var layerControl = L.control.layers(baseLayers, overlays).addTo(map)};
