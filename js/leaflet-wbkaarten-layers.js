@@ -208,7 +208,7 @@ const GrRWSWwerken = {
 };
 const RWSdis = {
     id: 'RWSdis',
-	name: "<i>G: RWS districten <a target='_blank' href='Images/VWMadelingen_RWSdistricten.png'>(met VWM)</a>",
+	name: "<i>G: RWS districten",
 	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/regiogebieden_rijkswaterstaat/ows?',{
 		layers: 'rijkswaterstaat_districten_nat', 
 		service: 'WMS',
@@ -244,21 +244,6 @@ const LabGeb = {
 	}),
 };
 
-const KM = {
-	id: 'KM',
-	name: 'L: Kilometrering',
-//	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/nwb_vaarwegen/ows?SERVICE=WMS&',{
-//		layers: 'kilometermarkeringen',
-	//	style: 'kmmarkeringen_met_labels', 
-	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/rws_legger/ows?SERVICE=WMS&',{
-		layers: 'kilometrering_legger',
-		minZoom: 8,
-		maxZoom: 14,   
-		transparent: 'true',
-		opacity: 0.75,
-		format: 'image/png'
-	}),
-};
 //Layers voor themas
 const AHN3 = {
 	id: 'AHN3',
