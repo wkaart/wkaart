@@ -292,7 +292,7 @@ var imageBounds = [[53.59111, 3.19734], [50.67647, 7.15560]];
 const KasEtc = {
 	id: 'KasEtc',
 	name: "<h style='color:brown;'>T: Kas,Bloem,Fruit,Boom(LGN6 <a target='_blank' href='https://www.wur.nl/nl/onderzoek-resultaten/onderzoeksinstituten/environmental-research/faciliteiten-tools/kaarten-en-gis-bestanden/landelijk-grondgebruik-nederland.htm'>i)</a>",
-	layer: L.imageOverlay('http://localhost:8000/data/LGN6KasEtc.png', imageBounds,{
+	layer: L.imageOverlay('data/LGN6KasEtc.png', imageBounds,{
 		opacity: 1
 	}),
 };
