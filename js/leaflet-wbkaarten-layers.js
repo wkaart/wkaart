@@ -195,17 +195,6 @@ const GrRWSKwan = {
   	format: 'image/png'
 	}),
 };
-const GrRWSWwerken = {
-	id: 'GrRWSWwerken',
-	name: "<i>G: RWS Waterstaatkundig beheer <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/19a51337-8c9d-4386-b861-d4876e8f93ad'>(i)</a>", 
-	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/waterbeheergrenzen/ows?',{
-	layers: 'waterstaatswerken', 
-	opacity: 0.6, 
-	tileSize: 2048,
-    transparent: 'true',
-  	format: 'image/png'
-	}),
-};
 const RWSdis = {
     id: 'RWSdis',
 	name: "<i>G: RWS districten",
