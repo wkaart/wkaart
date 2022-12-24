@@ -283,7 +283,7 @@ const Bodem = {
 	layer: L.tileLayer.wms('https://service.pdok.nl/bzk/bro-bodemkaart/wms/v1_0',{
 		layers: 'soilarea',
 		transparent: 'true',
-		opacity: 0.45,
+		opacity: 0.5,
 		format: 'image/png'
 	}),
 };
@@ -293,7 +293,7 @@ const Geomorf = {
 	layer: L.tileLayer.wms('https://service.pdok.nl/bzk/bro-geomorfologischekaart/wms/v1_0',{
 		layers: 'view_geomorphological_area',
 		transparent: 'true',
-		opacity: 0.45,
+		opacity: 0.6,
 		format: 'image/png'
 	}),
 };
@@ -311,7 +311,7 @@ const GrasAkker = {
 var imageBounds = [[53.59111, 3.19734], [50.67647, 7.15560]];
 const KasEtc = {
 	id: 'KasEtc',
-	name: "<h style='color:brown;'>T: Kas,Bloem,Fruit,Boom(LGN6 <a target='_blank' href='https://www.wur.nl/nl/onderzoek-resultaten/onderzoeksinstituten/environmental-research/faciliteiten-tools/kaarten-en-gis-bestanden/landelijk-grondgebruik-nederland.htm'>i)</a>",
+	name: "<h style='color:brown;'>T: Kas,Bloem,Fruit,Boom(2009,<a target='_blank' href='https://www.wur.nl/nl/onderzoek-resultaten/onderzoeksinstituten/environmental-research/faciliteiten-tools/kaarten-en-gis-bestanden/landelijk-grondgebruik-nederland.htm'>LGN6)</a>",
 	layer: L.imageOverlay('data/LGN6KasEtc.png', imageBounds,{
 		opacity: 1
 	}),
@@ -319,7 +319,7 @@ const KasEtc = {
 const Wateraanvoer = {
 	id: 'Wateraamvoer',
 	name: "<h style='color:brown;'>T: Wateraanvoergebieden (<a target='_blank' href='Images/Voorziening.png'>i)</a>",
-	layer: L.imageOverlay('http://localhost:8000/data/Watervoorziening.png', imageBounds,{
+	layer: L.imageOverlay('data/Watervoorziening.png', imageBounds,{
 		opacity: 0.45
 	}),
 };
