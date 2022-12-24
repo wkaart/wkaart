@@ -277,6 +277,26 @@ const NatSys = {
 	name: "<h style='color:brown;'>T: Basiskaart natuurlijk systeem <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/basiskaart-natuurlijk-systeem-nederland'>(i)</a>",
 	layer: L.layerGroup([NatSys_Hoofd.layer, NatSys_Sub.layer]),
 };
+const Bodem = {
+	id: 'Bodem',
+	name: "<h style='color:brown;'>T: Bodemkaart <a target='_blank' href='https://bodemdata.nl/basiskaarten'>(i)</a>",
+	layer: L.tileLayer.wms('https://service.pdok.nl/bzk/bro-bodemkaart/wms/v1_0',{
+		layers: 'soilarea',
+		transparent: 'true',
+		opacity: 0.45,
+		format: 'image/png'
+	}),
+};
+const Geomorf = {
+	id: 'Geomorf',
+	name: "<h style='color:brown;'>T: Geomorfologie <a target='_blank' href='https://bodemdata.nl/basiskaarten'>(i)</a>",
+	layer: L.tileLayer.wms('https://service.pdok.nl/bzk/bro-geomorfologischekaart/wms/v1_0',{
+		layers: 'view_geomorphological_area',
+		transparent: 'true',
+		opacity: 0.45,
+		format: 'image/png'
+	}),
+};
 const GrasAkker = {
 	id: 'GrasAkker',
 	name: "<h style='color:brown;'>T: Gras en akkerbouw <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/droogtegevoeligheid-natuur'>(i)</a>",
@@ -294,6 +314,13 @@ const KasEtc = {
 	name: "<h style='color:brown;'>T: Kas,Bloem,Fruit,Boom(LGN6 <a target='_blank' href='https://www.wur.nl/nl/onderzoek-resultaten/onderzoeksinstituten/environmental-research/faciliteiten-tools/kaarten-en-gis-bestanden/landelijk-grondgebruik-nederland.htm'>i)</a>",
 	layer: L.imageOverlay('data/LGN6KasEtc.png', imageBounds,{
 		opacity: 1
+	}),
+};
+const Wateraanvoer = {
+	id: 'Wateraamvoer',
+	name: "<h style='color:brown;'>T: Wateraanvoergebieden (<a target='_blank' href='Images/Voorziening.png'>i)</a>",
+	layer: L.imageOverlay('http://localhost:8000/data/Watervoorziening.png', imageBounds,{
+		opacity: 0.45
 	}),
 };
 const LabHoog = {
