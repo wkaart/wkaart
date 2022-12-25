@@ -323,6 +323,13 @@ const Wateraanvoer = {
 		opacity: 0.45
 	}),
 };
+const KrwGw = {
+	id: 'KrwGw',
+	name: "<h style='color:brown;'>T: KRW grondwaterlichamen (<a target='_blank' href='https://www.waterkwaliteitsportaal.nl/sgbp-kaarten'>i)</a>",
+	layer: L.imageOverlay('data/krwgrondwater.png', imageBounds,{
+		opacity: 0.5
+	}),
+};
 const LabHoog = {
 	id: 'LabHoog',
 	name: "L: Hoogtepunten",
