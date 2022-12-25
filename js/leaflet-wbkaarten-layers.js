@@ -212,7 +212,7 @@ const RWSdis = {
 //Layers voor achtergrondkaarten
 const LuFo = {
 	id: 'LuFo',
-	name: "<h style='color:brown;'>T: Luchtfoto transparant",
+	name: "T: Luchtfoto transparant",
 	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:28992/{z}/{x}/{y}.jpeg',{
 		opacity: 0.55,
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
@@ -236,7 +236,7 @@ const LabGeb = {
 //Layers voor themas
 const AHN3 = {
 	id: 'AHN3',
-	name: "<h style='color:brown;'>T: Hoogte (AHN)",
+	name: "T: Hoogte (AHN)",
 	layer: L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/ahn3_5m_dsm/EPSG:28992/{z}/{x}/{y}.png', {
 		minZoom: 1,
 		maxZoom: 19,
