@@ -25,20 +25,6 @@ const BRTgr = {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
 };
-//const OpenTopoA = {
-//	id: 'OpenTopoA',
-//	name: 'OpenTopo achtergrondkaart',
-//	layer: L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/opentopoachtergrondkaart/EPSG:28992/{z}/{x}/{y}.png', {
-//		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
-//	}),
-//};
-const OpenTopo = {
-	id: 'OpenTopo',
-	name: 'OpenTopo',
-	layer: L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/opentopo/EPSG:28992/{z}/{x}/{y}.png', {
-		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
-	}),
-};  
 var BRT = L.tileLayer('https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:28992/{z}/{x}/{y}.png', {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
 		maxZoom: 3,
