@@ -239,7 +239,7 @@ const NatSys_Hoofd = {
 		layers: 'bknsn_hoofdklasse',
 		transparent: 'true',
 		minZoom: 1,
-		maxZoom: 7,  
+		maxZoom: 4,  
 		opacity: 0.35,
 		format: 'image/png',
 		attribution: 'Klimaateffectatlas 2022'
@@ -251,16 +251,16 @@ const NatSys_Sub = {
 	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
 		layers: 'bknsn_subklasse',
 		transparent: 'true',
-		minZoom: 8,
+		minZoom: 5,
 		maxZoom: 15,  
-		opacity: 0.4,
+		opacity: 0.5,
 		format: 'image/png',
 		attribution: 'Klimaateffectatlas 2022'
 	}),
 };
 const NatSys = {
 	id: 'NatSys',
-	name: "<h style='color:brown;'>B: Basiskaart natuurlijk systeem <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/basiskaart-natuurlijk-systeem-nederland'>(i)</a>",
+	name: "<h style='color:brown;'>B: Basiskaart natuurlijk systeem <a target='_blank' href='Images/Legenda_natuurlijksysteem.png'>(L)</a> <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/basiskaart-natuurlijk-systeem-nederland'>(i)</a>",
 	layer: L.layerGroup([NatSys_Hoofd.layer, NatSys_Sub.layer]),
 };
 const Bodem = {
