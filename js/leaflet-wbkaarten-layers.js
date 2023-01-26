@@ -318,7 +318,7 @@ const KrwGw = {
 };
 const FysGeo = {
 	id: 'FysGeo',
-	name: "<h style='color:brown;'>T: Fysisch geografische regios <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/c8b5668f-c354-42f3-aafc-d15ae54cf170?tab=general'>(i)</a>",
+	name: "<h style='color:brown;'>B: Fysisch geografische regios <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/c8b5668f-c354-42f3-aafc-d15ae54cf170?tab=general'>(i)</a>",
 	layer: L.tileLayer.wms('https://service.pdok.nl/ez/fysischgeografischeregios/wms/v1_0',{
 		layers: 'fysischgeografischeregios',
 		transparent: 'true',
