@@ -427,9 +427,8 @@ const NatCat1 = {
 const NNN = {
     id: 'NNN',
 	name: "<h style='color:green;'>N: Natuurnetwerk Nederland</h> <a target='_blank' href='https://www.atlasleefomgeving.nl/natuurnetwerk-nederland-ehs'>(i)</a>",
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/provincies/ps/wms/v1?',{
-		layers: 'PS.ProtectedSite.nlps-nnn',
-		version: '1.3.0',
+	layer: L.tileLayer.wms('https://service.pdok.nl/provincies/natuurnetwerk-nederland/wms/v1_0?',{
+		layers: 'PS.ProtectedSite',
 		opacity: 0.5, 	
 		transparent: 'true',
 		format: 'image/png'
