@@ -223,7 +223,7 @@ const LabGeb = {
 const AHN3 = {
 	id: 'AHN3',
 	name: "T: Hoogte (AHN)",
-	layer: L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/ahn3_5m_dsm/EPSG:28992/{z}/{x}/{y}.png', {
+	layer: L.tileLayer('https://service.pdok.nl/rws/ahn3/wmts/v1_0?', {
 		minZoom: 1,
 		maxZoom: 19,
 		opacity: 0.6,
