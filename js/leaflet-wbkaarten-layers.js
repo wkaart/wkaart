@@ -368,6 +368,7 @@ const N2000 = {
     id: 'N2000',
 	name: "<h style='color:green;'>N: Natura2000</h> <a target='_blank' href='https://www.natura2000.nl/gebieden'>(i)</a>",
 	layer: L.tileLayer.wms('https://service.pdok.nl/rvo/natura2000/wms/v1_0', {
+		layers: 'natura2000',
 		opacity: 0.7, 	
 		transparent: 'true',
 		format: 'image/png'
