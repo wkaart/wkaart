@@ -885,7 +885,7 @@ const DrinkW = {
 };
 const DWBedrijven = {
 	id: 'DWBedrijven',
-	name: "<h style='color:darkblue;'>Wb: Drinkwaterbedrijven </h><a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/ad3f1e2a-bf7b-4f22-a32f-4948755c8970?tab=relations'>(i)</a>",
+	name: "<h style='color:darkblue;'>Wb: Drinkwaterbedrijven <a target='_blank' href='Images/DWBedrijven.png'>(i)</a>",
 	layer: L.tileLayer.wms('https://data.rivm.nl/geo/ank/wms',{
 		layers: 'rivm_r81_rg_voorzieningsgebiedendrinkwaterbedrijven',
 		transparent: 'true',
