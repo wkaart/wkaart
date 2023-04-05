@@ -276,8 +276,8 @@ const Bodem = {
 const Geomorf = {
 	id: 'Geomorf',
 	name: "<h style='color:brown;'>B: Geomorfologie <a target='_blank' href='https://bodemdata.nl/basiskaarten'>(i)</a>",
-	layer: L.tileLayer.wms('https://service.pdok.nl/bzk/bro-geomorfologischekaart/wms/v1_0',{
-		layers: 'view_geomorphological_area',
+	layer: L.tileLayer.wms('https://service.pdok.nl/bzk/bro-geomorfologischekaart/wms/v2_0',{
+		layers: 'geomorphological_area',
 		transparent: 'true',
 		opacity: 0.6,
 		format: 'image/png'
