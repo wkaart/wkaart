@@ -93,8 +93,8 @@ const NoBase = {
 const Prov = {
 	id: 'Prov',
 	name: '<i>G: Provincies', 
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/ows?SERVICE=WMS', {
-		layers: 'cbsgebiedsindelingen:cbs_provincie_2021_gegeneraliseerd',
+	layer: L.tileLayer.wms('https://service.pdok.nl/cbs/gebiedsindelingen/2023/wms/v1_0', {
+		layers: 'provincie_gegeneraliseerd',
 		minZoom: 2,
 		maxZoom: 12,
 		format: 'image/png',
@@ -104,8 +104,8 @@ const Prov = {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
 };
-const gem = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/ows?SERVICE=WMS', {
-	layers: 'cbsgebiedsindelingen:cbs_gemeente_2021_gegeneraliseerd',
+const gem = L.tileLayer.wms('https://service.pdok.nl/cbs/gebiedsindelingen/2023/wms/v1_0', {
+	layers: 'gemeente_gegeneraliseerd',
 	transparent: 'true',
 	minZoom: 3,
 	maxZoom: 14,
@@ -114,8 +114,8 @@ const gem = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsi
 	format: 'image/png',
 	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 });
-const gem_labels = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/ows?SERVICE=WMS', {
-	layers: 'cbsgebiedsindelingen:cbs_gemeente_2021_labelpoint',
+const gem_labels = L.tileLayer.wms('https://service.pdok.nl/cbs/gebiedsindelingen/2023/wms/v1_0', {
+	layers: 'gemeente_labelpoint',
 	transparent: 'true',
 	minZoom: 5,
 	maxZoom: 14,
@@ -143,8 +143,8 @@ const GrWS = {
 		format: 'image/png'
 	}),
 };
-const VR = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/ows?SERVICE=WMS', {
-	layers: 'cbsgebiedsindelingen:cbs_veiligheidsregio_2021_gegeneraliseerd',
+const VR = L.tileLayer.wms('https://service.pdok.nl/cbs/gebiedsindelingen/2022/wms/v1_0', {
+	layers: 'veiligheidsregio_gegeneraliseerd',
 	transparent: 'true',
 	minZoom: 2,
 	maxZoom: 12,
@@ -153,8 +153,8 @@ const VR = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsin
 	format: 'image/png',
 	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 });
-const VR_labels = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/ows?SERVICE=WMS', {
-	layers: 'cbsgebiedsindelingen:cbs_veiligheidsregio_2020_labelpoint',
+const VR_labels = L.tileLayer.wms('https://service.pdok.nl/cbs/gebiedsindelingen/2022/wms/v1_0', {
+	layers: 'veiligheidsregio_labelpoint',
 	transparent: 'true',
 	minZoom: 4,
 	maxZoom: 12,
