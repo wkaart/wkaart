@@ -60,7 +60,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, GrasAkker, KasEtc, stuwentot, DrinkW, DWBedrijven, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, GrasAkker, KasEtc, stuwentot, gemalenWS, DrinkW, DWBedrijven, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, Topkaarten, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -84,7 +84,7 @@ var params = new URLSearchParams(window.location.search);
 	};
   }
   else {
-		lagenaan.push(LabGeb.layer, LabHoog.layer);
+		lagenaan.push(LabGeb.layer, LabHoog.layer, gemalenWS.layer);
   };
 // check if base layer is set in url, otherwise set default
   if (params.has('basis')) {
@@ -157,6 +157,7 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[Sluizen.name] : Sluizen.layer,
 		[svk_keer.name] : svk_keer.layer,
 		[stuwentot.name] : stuwentot.layer,
+		[gemalenWS.name] : gemalenWS.layer,
 		[SPI1.name] : SPI1.layer,
 		[SPI3.name] : SPI3.layer,		
 		[SPI6.name] : SPI6.layer,
