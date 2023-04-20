@@ -786,7 +786,6 @@ const stuwenWS = {
 		layers: 'stuw',
 		minZoom: 9,
 		transparent: 'true',
-		format: 'image/png',
 		format: 'image/png'
 	}),
 };
@@ -796,6 +795,17 @@ const stuwentot = {
 	name: "<h style='color:blue;'>KW: Stuwen",
 	layer: L.layerGroup([stuwen.layer, stuwenWS.layer]),
 };
+const gemalenWS = {
+	id: 'gemalenWS',
+	name: "<h style='color:blue;'>KW: Gemalen waterschappen",
+	layer: L.tileLayer.wms('https://service.pdok.nl/hwh/kunstwrkimwa/wms/v1_0?',{
+		layers: 'gemaal',
+		minZoom: 9,
+		transparent: 'true',
+		format: 'image/png'
+	}),
+}; 
+
 //Drinkwater inname locaties - eerst symbolen dan locaties
 var cm_dw_options = {
 	weight: 2,
