@@ -448,7 +448,7 @@ const NNN = {
 const Wetlands = {
     id: 'Wetlands',
 	name: "<h style='color:green;'>N: Wetlands</h> <a target='_blank' href='https://www.natuurgegevens.nl/node/38'>(i)</a>",
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/wetlands/wms?',{
+	layer: L.tileLayer.wms('https://service.pdok.nl/rvo/wetlands/wms/v1_0',{
 		layers: 'wetlands',
 		version: '1.3.0',
 		opacity: 0.6, 	
