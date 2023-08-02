@@ -283,17 +283,7 @@ const Geomorf = {
 		format: 'image/png'
 	}),
 };
-const GrasAkker = {
-	id: 'GrasAkker',
-	name: "<h style='color:red;'>L: Gras en akkerbouw <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/droogtegevoeligheid-natuur'>(i)</a>",
-	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
-		layers: 'landbouwgebieden',
-		transparent: 'true',
-		opacity: 0.6,
-		format: 'image/png',
-		attribution: 'Klimaateffectatlas 2022'
-	}),
-};
+
 var imageBounds = [[53.59111, 3.19734], [50.67647, 7.15560]];
 const KasEtc = {
 	id: 'KasEtc',
