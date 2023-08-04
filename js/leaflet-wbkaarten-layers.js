@@ -62,13 +62,24 @@ var Top25 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/w
 	});
 var Top10NL = L.tileLayer('https://service.pdok.nl/brt/top10nl/wmts/v1_0/top10nl/EPSG:28992/{z}/{x}/{y}.png', {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
-		maxZoom: 15,
+		maxZoom: 13,
 		minZoom: 12
+	});
+var BGTStandaard = L.tileLayer('https://service.pdok.nl/lv/bgt/wmts/v1_0/standaardvisualisatie/EPSG:28992/{z}/{x}/{y}.png', {
+//		layers: 'standaardvisualisatie',
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 16,
+		minZoom: 14
+	});
+var BGTIcoon = L.tileLayer('https://service.pdok.nl/lv/bgt/wmts/v1_0/icoonvisualisatie/EPSG:28992/{z}/{x}/{y}.png', {
+		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
+		maxZoom: 16,
+		minZoom: 14
 	});
 const Topkaarten = {
 	id: 'Topkaarten',
 	name: 'Topkaarten', 
-	layer: L.layerGroup([BRT,Top1000,Top500,Top250,Top100,Top50,Top25,Top10NL]),
+	layer: L.layerGroup([BRT,Top1000,Top500,Top250,Top100,Top50,Top25,Top10NL,BGTStandaard,BGTIcoon]),
 };
 const LuFoZ = {
 	id: 'LuFoZ',
