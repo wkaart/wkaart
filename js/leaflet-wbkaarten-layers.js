@@ -30,36 +30,59 @@ var BRT = L.tileLayer('https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/st
 		maxZoom: 3,
 		minZoom: 1
 	});
-var Top1000 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top1000raster/EPSG:28992/{z}/{x}/{y}.png', {
-		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
-		maxZoom: 4,
-		minZoom: 4
+var Top1000 = L.tileLayer.wms('https://service.pdok.nl/brt/topraster/wms/v1_0', {
+	layers: 'top1000raster',
+	transparent: 'true',
+	minZoom: 4,
+	maxZoom: 4,
+	format: 'image/png',
+	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	});
-var Top500 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top500raster/EPSG:28992/{z}/{x}/{y}.png', {
-		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
-		maxZoom: 5,
-		minZoom: 5
+var Top500 = L.tileLayer.wms('https://service.pdok.nl/brt/topraster/wms/v1_0', {
+	layers: 'top500raster',
+	transparent: 'true',
+	minZoom: 5,
+	maxZoom: 5,
+	format: 'image/png',
+	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	});
-var Top250 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top250raster/EPSG:28992/{z}/{x}/{y}.png', {
-		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
-		maxZoom: 7,
-		minZoom: 6
-	});
-var Top100 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top100raster/EPSG:28992/{z}/{x}/{y}.png', {
-		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
-		maxZoom: 8,
-		minZoom: 8
-	});
-var Top50 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top50raster/EPSG:28992/{z}/{x}/{y}.png', {
-		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
-		maxZoom: 9,
-		minZoom: 9
-	});
+var Top250 = L.tileLayer.wms('https://service.pdok.nl/brt/topraster/wms/v1_0', {
+	layers: 'top250raster',
+	transparent: 'true',
+	minZoom: 6,
+	maxZoom: 7,
+	format: 'image/png',
+	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
+	});	
+var Top100 = L.tileLayer.wms('https://service.pdok.nl/brt/topraster/wms/v1_0', {
+	layers: 'top100raster',
+	transparent: 'true',
+	minZoom: 8,
+	maxZoom: 8,
+	format: 'image/png',
+	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
+	})
+var Top50 = L.tileLayer.wms('https://service.pdok.nl/brt/topraster/wms/v1_0', {
+	layers: 'top50raster',
+	transparent: 'true',
+	minZoom: 9,
+	maxZoom: 9,
+	format: 'image/png',
+	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
+});
 var Top25 = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/top25raster/EPSG:28992/{z}/{x}/{y}.png', {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
 		maxZoom: 11,
 		minZoom: 10
 	});
+var Top25 = L.tileLayer.wms('https://service.pdok.nl/brt/topraster/wms/v1_0', {
+	layers: 'top25raster',
+	transparent: 'true',
+	minZoom: 10,
+	maxZoom: 11,
+	format: 'image/png',
+	attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
+});
 var Top10NL = L.tileLayer('https://service.pdok.nl/brt/top10nl/wmts/v1_0/top10nl/EPSG:28992/{z}/{x}/{y}.png', {
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>',
 		maxZoom: 13,
