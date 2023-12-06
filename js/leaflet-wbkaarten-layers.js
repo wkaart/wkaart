@@ -257,11 +257,11 @@ const LabGeb = {
 const AHN3 = {
 	id: 'AHN3',
 	name: "T: Hoogte (AHN)",
-	layer: L.tileLayer('https://service.pdok.nl/rws/ahn3/wmts/v1_0/ahn3_5m_dsm/EPSG:28992/{z}/{x}/{y}.png', {
+	layer: L.tileLayer.wms('https://service.pdok.nl/rws/ahn/wms/v1_0',{
+		layers: 'dtm_05m',
 		minZoom: 1,
 		maxZoom: 19,
 		opacity: 0.6,
-//		CRS: 'EPSG:28992',
 		format: 'image/png',
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
