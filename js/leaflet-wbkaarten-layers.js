@@ -164,15 +164,13 @@ const GemMetLab = {
 	name: '<i>G: Gemeenten',
 	layer: L.layerGroup([gem, gem_labels]),
 };
-//Waterschappen van: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/684ff4f6-1652-45a8-93f0-8e16d37b2a66
+//Waterschappen van Geodan/Klimaateffectatlas omdat grenzen van Waterschapshuis via PDOK en nationaalgeoregister sinds 1 dec 2023 niet meer goed gepresenteerd worden
 const GrWS = {
 	id: 'GrWS',
 	name: '<i>G: Waterschappen',
-	layer: L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/hwh/eenheden/wms/v1_0?',{
-		layers: 'AU.AdministrativeUnit',
+	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+		layers: 'Waterschapsgrenzen',
 		transparent: 'true',
-		format: 'image/png',
-		tileSize: 1024,
 		opacity: 0.8,
 		format: 'image/png'
 	}),
