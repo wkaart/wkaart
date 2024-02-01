@@ -271,7 +271,7 @@ const NatSys_Hoofd = {
 		layers: 'bknsn_hoofdklasse',
 		transparent: 'true',
 		minZoom: 1,
-		maxZoom: 4,  
+		maxZoom: 2,  
 		opacity: 0.35,
 		format: 'image/png',
 		attribution: 'Klimaateffectatlas 2022'
@@ -281,9 +281,9 @@ const NatSys_Sub = {
 	id: 'NatSys',
 	name: "<h style='color:brown;'>B: Basiskaart natuurlijk systeem <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/basiskaart-natuurlijk-systeem-nederland'>(i)</a>",
 	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
-		layers: 'bknsn_subklasse',
+		layers: 'bknsn_subklasse_2023_dreigingen_kansen',
 		transparent: 'true',
-		minZoom: 5,
+		minZoom: 3,
 		maxZoom: 15,  
 		opacity: 0.5,
 		format: 'image/png',
