@@ -335,7 +335,7 @@ const KrwGw = {
 	id: 'KrwGw',
 	name: "<h style='color:brown;'>B: KRW grondwaterlichamen (<a target='_blank' href='https://www.waterkwaliteitsportaal.nl/sgbp-kaarten'>i)</a>",
 	layer: L.imageOverlay('data/waterverdeling_zeerlaag.png', imageBounds,{
-		opacity: 0.5
+		opacity: 1
 	}),
 };
 const FysGeo = {
