@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>
+	<title>Waterbeheer kaarten</title>
+	<link rel="stylesheet" href="js/leaflet.css"/>
+	<script src="js/leaflet.js"></script>
+	<script src="js/proj4.js"></script>
+	<script src="js/proj4leaflet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!--- files for location control from https://domoritz.github.io/leaflet-locatecontrol/ --->	
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+  	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+	<!--- files with layer definitions --->
+	<script src="js/leaflet.geocsv-src.js"></script>
+	<script src="js/leaflet-wbkaarten-layers.js"></script>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    html, body, #map {
+        height: 100%;
+        width: 100vw;
+    }
+    .leaflet-container {
+    background: #FFF;
+    }
+    @media (hover: none) {
+	.leaflet-tooltip-pane { display: none; }
+	}
+ 	.leaflet-tooltip.N2000-labels {
+		background-color: transparent;
+		border: transparent;
+		box-shadow: none;
+		font-style:italic;
+		color:darkgreen;
+		text-shadow:  2px 2px #ccffcc;
+	}
+    </style>
+<!--- Meta info to prevent controls becoming small on mobile --->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="https://wkaart.github.io/wkaart/" />
+    <meta property="og:image" content="https://wkaart.github.io/wkaart/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Waterbeheer kaarten." />
+    <meta property="og:locale" content="nl-NL" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+ <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+<div id="map"></div>
+ 
+<script>
+// Define the layers to be used (set in other js files)
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, DrinkW, DWBedrijven, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const baselayerlist = [BRTw, BRTgr, Topkaarten, LuFoZ, LuFoW, NoBase]
+var lagenaan = [];
+
+//Check if coordinates and zoom level are in url, otherwise use default
+var params = new URLSearchParams(window.location.search);
+  if (params.has('z')) {zoom = params.get('z')} else {zoom=3, params.set('z',3)};
+  if (params.has('x')) {x = Number(params.get('x'))} else {x=150000, params.set('x',x)};
+  if (params.has('y')) {y = Number(params.get('y'))} else {y=460000, params.set('y',y)};
+    var center = L.point(x,y);
+
+// Check if layers are in url lezen and add to active list. If not, set some default layers
+  if (params.has('lagen')) {
+	lagen = params.get('lagen');
+	if (lagen !== "") {
+		lagen = lagen.split(',');
+		lagen.forEach(laagid =>{
+			let laag = lagenlijst.find(laag => laag.id === laagid);
+			laag = laag.layer;
+			lagenaan.push(laag);
+	});
+	};
+  }
+  else {
+		lagenaan.push(LabGeb.layer, LabHoog.layer, gemalenWS.layer);
+  };
+// check if base layer is set in url, otherwise set default
+  if (params.has('basis')) {
+	base = params.get('basis');
+	if (base !== "") {
+		let laag = baselayerlist.find(laag => laag.id === base);		
+		laag = laag.layer;
+		lagenaan.push(laag);
+		};
+  }
+  else {
+		lagenaan.push(BRTw.layer);
+  };
+// check if controls are set to turn of
+	if (params.has('zoomoff')) {zoomcontrol=false} else {zoomcontrol=true};
+	if (params.has('scaleoff')) {scalebar=false} else {scalebar=true};
+	if (params.has('listoff')) {list = false} else {list = true};
+
+var map = new L.Map('map', {
+  center: RD.projection.unproject(center),
+  zoom: zoom, 
+  minZoom: 1, 
+  maxZoom: 15,
+  crs: RD,
+  tap: false,
+  zoomControl: zoomcontrol
+//  layers: lagenaan
+});
+map.createPane('kerPrimPane');
+map.getPane('kerPrimPane').style.zIndex = 210;
+map.createPane('svk');
+map.getPane('svk').style.zIndex = 630;
+map.createPane('LabelsPane');
+map.getPane('LabelsPane').style.zIndex = 660;
+	
+lagenaan.forEach(laag => map.addLayer(laag));
+
+	var baseLayers = {
+		'BRT Water': BRTw.layer,
+		'BRT Grijs': BRTgr.layer,
+		'Topkaarten': Topkaarten.layer,
+		'Luchtfoto zomer (25cm)': LuFoZ.layer,
+		'Luchtfoto winter (8cm)': LuFoW.layer,
+		'Geen achtergrond': L.tileLayer(''),
+	};
+	
+ 	var overlays = {
+		[GrWS.name] : GrWS.layer,
+		[Prov.name] : Prov.layer,
+		[GemMetLab.name] : GemMetLab.layer,		
+		[VRenLab.name] : VRenLab.layer,
+		[RWSdis.name] : RWSdis.layer,
+		[GrRWSKwan.name] : GrRWSKwan.layer,
+		[N2000.name] : N2000.layer,	
+		[NatCat1.name] : NatCat1.layer,			
+		[NNN.name] : NNN.layer,	
+		[Wetlands.name] : Wetlands.layer,
+		[NatGW_gevoelig.name] : NatGW_gevoelig.layer,
+		[KasEtc.name] : KasEtc.layer,
+		[Wateraanvoer.name]: Wateraanvoer.layer,
+		[DrinkW.name] : DrinkW.layer,
+		[DWBedrijven.name] : DWBedrijven.layer,
+		[NatSys.name]: NatSys.layer,
+		[FysGeo.name]: FysGeo.layer,
+		[Bodem.name]: Bodem.layer,		
+		[Geomorf.name]: Geomorf.layer,
+		[KrwGw.name]: KrwGw.layer,		
+		[sluizenrws.name]: sluizenrws.layer,
+		[Sluizen.name] : Sluizen.layer,
+		[svk_keer.name] : svk_keer.layer,
+		[stuwentot.name] : stuwentot.layer,
+		[gemalenWS.name] : gemalenWS.layer,
+		[SPI1.name] : SPI1.layer,
+		[SPI3.name] : SPI3.layer,		
+		[SPI6.name] : SPI6.layer,
+		[Bevaar.name] : Bevaar.layer,
+		[MGD.name] : MGD.layer,
+		[VWkaart.name] : VWkaart.layer,
+		[AHN3.name]: AHN3.layer,
+		[LuFo.name] : LuFo.layer,
+		[LabGeb.name] : LabGeb.layer,			
+		[LabHoog.name] : LabHoog.layer,
+		[KerPrim.name] : KerPrim.layer,
+		[KerWS.name] : KerWS.layer,
+		[KerRWSreg.name] : KerRWSreg.layer,
+		[WBerging.name] : WBerging.layer,
+		[InunMid.name] : InunMid.layer,
+		[InunMax.name] : InunMax.layer,
+		[Water70mm.name] : Water70mm.layer
+	};
+// Add controls
+if (list) {var layerControl = L.control.layers(baseLayers, overlays).addTo(map)};
+if (scalebar) {L.control.scale({imperial: false}).addTo(map)};
+L.control.locate({locateOptions:{maxZoom:9,enableHighAccuracy: true}}).addTo(map);
+	
+//Update x,y and z in url after map movement
+var UpdateUrlxy= function () {
+  var currentZoom = map.getZoom();
+  var currentCenter = RD.projection.project(map.getCenter());
+  var currentX = parseInt(currentCenter.x);
+  var currentY = parseInt(currentCenter.y);
+  params.set('z', currentZoom);
+  params.set('x', currentX);
+  params.set('y', currentY);
+  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+};
+var UpdateLabels = function () {
+    if (map.getZoom() > 5 && map.hasLayer(N2000.layer)) {
+          N2000namen.layer.addTo(map);
+    } else { 
+        N2000namen.layer.remove();
+    }
+};
+UpdateLabels();
+map.on('zoomend moveend', UpdateUrlxy);
+map.on('zoomend moveend', UpdateLabels);
+	
+//update list of layers in url after switching layers on or off
+var UpdateUrlLagen= function () {
+  const laagnamen = []; 
+  lagenlijst.forEach(laagid => {
+	var layer = laagid.layer;
+	if (map.hasLayer(layer)) {
+		laagnaam = laagid.id;
+		laagnamen.push(laagnaam);
+		}
+   });
+  params.set('lagen',laagnamen);
+  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+};
+map.on('overlayadd overlayremove', UpdateUrlLagen);
+map.on('overlayadd overlayremove', UpdateLabels);
+	
+//update baselayer in url
+var UpdateUrlBase= function () {
+  const baselayers = []; 
+  baselayerlist.forEach(laagid => {
+	var layer = laagid.layer;
+	if (map.hasLayer(layer)) {
+		laagnaam = laagid.id;
+		baselayers.push(laagnaam);
+		}
+   });
+  params.set('basis',baselayers);
+  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+};
+map.on('baselayerchange', UpdateUrlBase);
+
+</script>
+</body>
+</html>
