@@ -327,7 +327,7 @@ const KasEtc = {
 const Wateraanvoer = {
 	id: 'Wateraamvoer',
 	name: "<h style='color:darkblue;'>Wb: Wateraanvoergebieden (<a target='_blank' href='Images/Voorziening.png'>i)</a>",
-	layer: L.imageOverlay('data/Watervoorziening.png', imageBounds,{
+	layer: L.imageOverlay('data/waterverdeling_laag.png', imageBounds,{
 		opacity: 0.45
 	}),
 };
