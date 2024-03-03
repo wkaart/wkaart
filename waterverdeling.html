@@ -60,14 +60,14 @@
 // Define the layers to be used (set in other js files)
 var imageBounds = [[53.811, 2.97317], [50.282561, 7.57402]];
 var imageBoundsOverzicht = [[53.783755, 2.983449], [50.54491, 7.237475]];
-var WV_l_overzicht = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterkaart_overzichtskaart_laag_trans.png', imageBoundsOverzicht, {pane: 'OverzichtPane'});
-var WV_zl_overzicht = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterkaart_overzichtskaart_zeerlaag_trans.png', imageBoundsOverzicht, {pane: 'OverzichtPane'});
-var WV_l_bodem = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_laag_bodem.png', imageBounds);
-var WV_zl_bodem = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_zeerlaag_bodem.png', imageBounds);
-var WV_l_natuur = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_laag_natuur.png', imageBounds);
-var WV_zl_natuur = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_zeerlaag_natuur.png', imageBounds);
-var WV_l_landbouw = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_laag_landbouw.png', imageBounds);
-var WV_zl_landbouw = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_zeerlaag_landbouw.png', imageBounds);
+var WV_l_overzicht = L.imageOverlay('waterverdeling_maps/Waterkaart_overzichtskaart_laag_trans.png', imageBoundsOverzicht, {pane: 'OverzichtPane'});
+var WV_zl_overzicht = L.imageOverlay('waterverdeling_maps/Waterkaart_overzichtskaart_zeerlaag_trans.png', imageBoundsOverzicht, {pane: 'OverzichtPane'});
+var WV_l_bodem = L.imageOverlay('waterverdeling_maps/Waterverdeling_laag_bodem.png', imageBounds);
+var WV_zl_bodem = L.imageOverlay('waterverdeling_maps/Waterverdeling_zeerlaag_bodem.png', imageBounds);
+var WV_l_natuur = L.imageOverlay('waterverdeling_maps/Waterverdeling_laag_natuur.png', imageBounds);
+var WV_zl_natuur = L.imageOverlay('waterverdeling_maps/Waterverdeling_zeerlaag_natuur.png', imageBounds);
+var WV_l_landbouw = L.imageOverlay('waterverdeling_maps/Waterverdeling_laag_landbouw.png', imageBounds);
+var WV_zl_landbouw = L.imageOverlay('waterverdeling_maps/Waterverdeling_zeerlaag_landbouw.png', imageBounds);
 
 const lagenlijst = [];
 const baselayerlist = [BRTw, WVlaag_overzicht, WVzeerlaag_bodem, WVlaag_natuur]
