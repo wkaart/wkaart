@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+	<title>Waterbeheer kaarten</title>
+<!--- leaflet css en ja van https://unpkg.com/leaflet@1.9.4/dist/  --->	
+	<link rel="stylesheet" href="js/leaflet.css" />
+<script src="js/leaflet.js" ></script>
+	
+	<script src="https://unpkg.com/proj4@2.5.0/dist/proj4-src.js"></script>
+	<script src="https://unpkg.com/proj4leaflet@1.0.1"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--- files for location control from https://domoritz.github.io/leaflet-locatecontrol/ --->	
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+<!--- files with layer definitions --->
+	<script src="js/leaflet.geocsv-src.js"></script>
+	<script src="js/waterverdeling-layers.js"></script>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    html, body, #map {
+        height: 100%;
+        width: 100vw;
+    }
+    .leaflet-container {
+    background: #FFF;
+    }
+	@media (hover: none) {
+	.leaflet-tooltip-pane { display: none; }
+	}
+	.leaflet-tooltip.N2000-labels {
+		background-color: transparent;
+		border: transparent;
+		box-shadow: none;
+		font-style:italic;
+		color:darkgreen;
+		text-shadow: 2px 2px #ccffcc;
+	}
+    </style>
+<!--- Meta info to prevent controls becoming small on mobile --->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="https://wkaart.github.io/wkaart/" />
+    <meta property="og:image" content="https://wkaart.github.io/wkaart/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Waterbeheer kaarten." />
+    <meta property="og:locale" content="nl-NL" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico" >
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+<div id="map"></div>
+ 
+<script>
+// Define the layers to be used (set in other js files)
+var imageBounds = [[53.811, 2.97317], [50.282561, 7.57402]];
+var imageBoundsOverzicht = [[53.783755, 2.983449], [50.54491, 7.237475]];
+var WV_l_overzicht = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterkaart_overzichtskaart_laag_trans.png', imageBoundsOverzicht, {pane: 'OverzichtPane'});
+var WV_zl_overzicht = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterkaart_overzichtskaart_zeerlaag_trans.png', imageBoundsOverzicht, {pane: 'OverzichtPane'});
+var WV_l_bodem = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_laag_bodem.png', imageBounds);
+var WV_zl_bodem = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_zeerlaag_bodem.png', imageBounds);
+var WV_l_natuur = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_laag_natuur.png', imageBounds);
+var WV_zl_natuur = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_zeerlaag_natuur.png', imageBounds);
+var WV_l_landbouw = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_laag_landbouw.png', imageBounds);
+var WV_zl_landbouw = L.imageOverlay('http://localhost:8000/waterverdeling_maps/Waterverdeling_zeerlaag_landbouw.png', imageBounds);
+
+const lagenlijst = [];
+const baselayerlist = [BRTw, WVlaag_overzicht, WVzeerlaag_bodem, WVlaag_natuur]
+var lagenaan = [];
+
+//Check if coordinates and zoom level are in url, otherwise use default
+var params = new URLSearchParams(window.location.search);
+  if (params.has('z')) {zoom = params.get('z')} else {zoom=4, params.set('z',4)};
+  if (params.has('x')) {x = Number(params.get('x'))} else {x=150000, params.set('x',x)};
+  if (params.has('y')) {y = Number(params.get('y'))} else {y=460000, params.set('y',y)};
+    var center = L.point(x,y);
+
+// Check if layers are in url lezen and add to active list. If not, set some default layers
+  if (params.has('lagen')) {
+	lagen = params.get('lagen');
+	if (lagen !== "") {
+		lagen = lagen.split(',');
+		lagen.forEach(laagid =>{
+			let laag = lagenlijst.find(laag => laag.id === laagid);
+			laag = laag.layer;
+			lagenaan.push(laag);
+	});
+	};
+  }
+  else {
+		  };
+// check if base layer is set in url, otherwise set default
+  if (params.has('basis')) {
+	base = params.get('basis');
+	if (base !== "") {
+		let laag = baselayerlist.find(laag => laag.id === base);		
+		laag = laag.layer;
+		lagenaan.push(laag);
+		};
+  }
+  else {
+		lagenaan.push(WV_zl_natuur);
+  };
+// check if controls are set to turn of
+	if (params.has('zoomoff')) {zoomcontrol=false} else {zoomcontrol=true};
+	if (params.has('scaleoff')) {scalebar=false} else {scalebar=true};
+	if (params.has('listoff')) {list = false} else {list = true};
+	if (params.has('locateoff')) {loc = false} else {loc = true};
+	
+var map = new L.Map('map', {
+  center: RD.projection.unproject(center),
+  zoom: zoom, 
+  minZoom: 1, 
+  maxZoom: 7,
+  zoomSnap: 0.25,
+  zoomDelta: 0.5,
+  wheelPxPerZoomLevel: 120,
+  layers: [WV_zl_natuur],
+  crs: RD,
+ tap: false,
+  zoomControl: zoomcontrol
+//  layers: lagenaan
+});
+map.createPane('OverzichtPane');
+map.getPane('OverzichtPane').style.zIndex = 660;
+
+	map.removeLayer(WV_l_overzicht);
+	map.removeLayer(WV_zl_overzicht);
+	if ((map.hasLayer(WV_l_bodem) || map.hasLayer(WV_l_natuur) || map.hasLayer(WV_l_landbouw)) && map.getZoom() < 3.7) {
+		WV_l_overzicht.addTo(map)};
+		
+	if ((map.hasLayer(WV_zl_bodem) || map.hasLayer(WV_zl_natuur) || map.hasLayer(WV_zl_landbouw)) && map.getZoom() < 3.7) {
+		WV_zl_overzicht.addTo(map)};
+		
+
+lagenaan.forEach(laag => map.addLayer(laag));
+
+	var baseLayers = {
+
+		'Waterverdeling laag bodem': WV_l_bodem,
+		'Waterverdeling zeer laag bodem': WV_zl_bodem,
+		'Waterverdeling laag natuur': WV_l_natuur,
+		'Waterverdeling zeer laag natuur': WV_zl_natuur,
+		'Waterverdeling laag landbouw': WV_l_landbouw,
+		'Waterverdeling zeer laag landbouw': WV_zl_landbouw,
+	};
+	
+ 	var overlays = {
+
+	};
+// Add controls
+if (list) {var layerControl = L.control.layers(baseLayers, overlays).addTo(map)};
+if (scalebar) {L.control.scale({imperial: false}).addTo(map)};
+L.control.locate({locateOptions:{maxZoom:9,enableHighAccuracy: true}}).addTo(map);
+
+//Update x,y and z in url after map movement
+var UpdateUrlxy= function () {
+  var currentZoom = map.getZoom();
+  var currentCenter = RD.projection.project(map.getCenter());
+  var currentX = parseInt(currentCenter.x);
+  var currentY = parseInt(currentCenter.y);
+  params.set('z', currentZoom);
+  params.set('x', currentX);
+  params.set('y', currentY);
+  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+};
+
+
+map.on('zoomend moveend', UpdateUrlxy);
+
+//update list of layers in url after switching layers on or off
+var UpdateUrlLagen= function () {
+  const laagnamen = []; 
+  lagenlijst.forEach(laagid => {
+	var layer = laagid.layer;
+	if (map.hasLayer(layer)) {
+		laagnaam = laagid.id;
+		laagnamen.push(laagnaam);
+		}
+   });
+  params.set('lagen',laagnamen);
+  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+};
+
+
+//update baselayer in url
+var UpdateUrlBase= function () {
+  const baselayers = []; 
+  baselayerlist.forEach(laagid => {
+	var layer = laagid.layer;
+	if (map.hasLayer(layer)) {
+		laagnaam = laagid.id;
+		baselayers.push(laagnaam);
+		}
+   });
+  params.set('basis',baselayers);
+  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+};
+map.on('baselayerchange', UpdateUrlBase);
+
+
+//
+var UpdateImageLayers= function () {
+	map.removeLayer(WV_l_overzicht);
+	map.removeLayer(WV_zl_overzicht);
+	if ((map.hasLayer(WV_l_bodem) || map.hasLayer(WV_l_natuur) ||map.hasLayer(WV_l_landbouw)) && map.getZoom() < 3.7) {
+		WV_l_overzicht.addTo(map)};
+	if ((map.hasLayer(WV_zl_bodem) || map.hasLayer(WV_zl_natuur) ||map.hasLayer(WV_zl_landbouw)) && map.getZoom() < 3.7) {
+		WV_zl_overzicht.addTo(map)};
+};
+map.on('zoomend', UpdateImageLayers);
+map.on('overlayadd overlayremove', UpdateImageLayers);
+map.on('baselayerchange', UpdateImageLayers);
+
+</script>
+</body>
+</html>
