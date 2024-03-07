@@ -109,7 +109,7 @@ var params = new URLSearchParams(window.location.search);
 		};
   }
   else {
-		lagenaan.push(WV_zl_natuur);
+		lagenaan.push(WV_zl_landbouw);
   };
 // check if controls are set to turn of
 	if (params.has('zoomoff')) {zoomcontrol=false} else {zoomcontrol=true};
@@ -125,7 +125,7 @@ var map = new L.Map('map', {
   zoomSnap: 0.5,
   zoomDelta: 0.5,
   wheelPxPerZoomLevel: 120,
-  layers: [WV_zl_natuur],
+  layers: [WV_zl_landbouw],
   crs: RD,
  tap: false,
   zoomControl: zoomcontrol
