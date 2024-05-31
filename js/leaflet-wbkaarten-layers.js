@@ -207,7 +207,7 @@ const GrRWSKwan = {
 	name: "<i>G: RWS Kwantiteit <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/d2ca9977-05d9-49e6-a967-d21d2fd488cc'>(i)</a>", 
 	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/omgevingswet/ows?',{
 	layers: 'waterkwantiteitsbeheer_rijk', 
-	opacity: 0.65, 
+	opacity: 0.75, 
 	tileSize: 2048,
     transparent: 'true',
   	format: 'image/png'
