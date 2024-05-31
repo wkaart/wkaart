@@ -204,10 +204,10 @@ const VRenLab = {
 };
 const GrRWSKwan = {
 	id: 'GrRWSKwan',
-	name: "<i>G: RWS Kwantiteit <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/cdbea91f-e76c-494a-921d-7a1e75a2d5f9'>(i)</a>", 
-	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/waterbeheergrenzen/ows?',{
-	layers: 'waterkwantiteit', 
-	opacity: 0.3, 
+	name: "<i>G: RWS Kwantiteit <a target='_blank' href='https://maps.rijkswaterstaat.nl/dataregister/srv/dut/catalog.search#/metadata/d2ca9977-05d9-49e6-a967-d21d2fd488cc'>(i)</a>", 
+	layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/gdr/omgevingswet/ows?',{
+	layers: 'waterkwantiteitsbeheer_rijk', 
+	opacity: 0.65, 
 	tileSize: 2048,
     transparent: 'true',
   	format: 'image/png'
