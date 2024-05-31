@@ -592,9 +592,9 @@ const Water70mm = {
 //Lagen voor vaarwegen
 const Bevaar = {
 	id: 'Bevaar',
-	name: "<h style='color:orange;'>Vw: Bevaarbaarheid <a target='_blank' href='https://geo.rijkswaterstaat.nl/services/ogc/gdr/vaarweginformatie/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=vaarweginformatie%3Abevaarbaarheid' >(i)</a>",
-    layer: L.tileLayer.wms('https://service.pdok.nl/rws/vin/wms/v1_0',{
-		layers: 'bevaarbaarheid', 
+	name: "<h style='color:orange;'>Vw: Bevaarbaarheid <a target='_blank' href='Images/Legenda_bevaarbaarheid.png'>(L)</a> <a target='_blank' href='https://www.pdok.nl/introductie/-/article/vaarweg-netwerk-data-service-vnds' >(i)</a>",
+    layer: L.tileLayer.wms('https://service.pdok.nl/rws/vnds/wms/v1_0',{
+		layers: 'l_bevaarbaarheid', 
 		minZoom: 1,
 		maxZoom: 19,   
 		transparent: 'true',
