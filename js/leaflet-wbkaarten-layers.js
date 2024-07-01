@@ -520,7 +520,7 @@ const KerPrim = {
 const KerWS = {
 	id: 'KerWS',
 	name: "<h style='color:red;'>V: Keringen waterschappen <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/e55d0ae4-fd31-440f-8faa-9e28dcc7a5a5'>(i)</a>",
-    layer: L.tileLayer.wms('https://service.pdok.nl/hwh/keringenimwa/wms/v1_0?',{
+    layer: L.tileLayer.wms('https://service.pdok.nl/hwh/keringenimwa/wms/v2_0?',{
 		layers: 'waterkering', 
 		version: '1.3.0',
 		minZoom: 1,
@@ -533,7 +533,7 @@ const KerWS = {
 const WBerging = {
 	id: 'WBerging',
 	name: "<h style='color:red;'>V: Waterbergingsgebieden <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/f06984ba-5e3c-4fa6-9078-a69617122d67'>(i)</a>",
-    layer: L.tileLayer.wms('https://service.pdok.nl/hwh/oppwaterimwa/wms/v1_0?',{
+    layer: L.tileLayer.wms('https://service.pdok.nl/hwh/zonderingenimwa/wms/v1_0?',{
 		layers: 'Waterbergingsgebied', 
 //		version: '1.3.0',
 		transparent: 'true',
@@ -804,7 +804,7 @@ $.ajax ({
 const stuwenWS = {
 	id: 'stuwenWS',
 	name: 'Wb: Stuwen waterschappen',
-	layer: L.tileLayer.wms('https://service.pdok.nl/hwh/kunstwrkimwa/wms/v1_0?',{
+	layer: L.tileLayer.wms('https://service.pdok.nl/hwh/kunstwerkenimwa/wms/v1_0?',{
 		layers: 'stuw',
 		minZoom: 9,
 		transparent: 'true',
@@ -820,7 +820,7 @@ const stuwentot = {
 const gemalenWS = {
 	id: 'gemalenWS',
 	name: "<h style='color:blue;'>KW: Gemalen waterschappen",
-	layer: L.tileLayer.wms('https://service.pdok.nl/hwh/kunstwrkimwa/wms/v1_0?',{
+	layer: L.tileLayer.wms('https://service.pdok.nl/hwh/kunstwerkenimwa/wms/v1_0?',{
 		layers: 'gemaal',
 		minZoom: 9,
 		transparent: 'true',
