@@ -533,7 +533,7 @@ const KerWS = {
 const WBerging = {
 	id: 'WBerging',
 	name: "<h style='color:red;'>V: Waterbergingsgebieden <a target='_blank' href='https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/f06984ba-5e3c-4fa6-9078-a69617122d67'>(i)</a>",
-    layer: L.tileLayer.wms('https://service.pdok.nl/hwh/zonderingenimwa/wms/v1_0?',{
+    layer: L.tileLayer.wms('https://service.pdok.nl/hwh/zoneringenimwa/wms/v1_0?',{
 		layers: 'Waterbergingsgebied', 
 //		version: '1.3.0',
 		transparent: 'true',
