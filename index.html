@@ -56,7 +56,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, DrinkW, DWBedrijven, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, RWZIs, DrinkW, DWBedrijven, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, Topkaarten, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -153,6 +153,7 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[svk_keer.name] : svk_keer.layer,
 		[stuwentot.name] : stuwentot.layer,
 		[gemalenWS.name] : gemalenWS.layer,
+		[RWZIs.name] : RWZIs.layer,
 		[SPI1.name] : SPI1.layer,
 		[SPI3.name] : SPI3.layer,		
 		[SPI6.name] : SPI6.layer,
