@@ -828,6 +828,17 @@ const gemalenWS = {
 	}),
 }; 
 
+const RWZIs = {
+	id: 'RWZIs',
+	name: "<h style='color:blue;'>KW: RWZI's",
+	layer: L.tileLayer.wms('https://service.pdok.nl/rioned/wswaterketen/wms/v1_0?',{
+		layers: 'waterschap_rwzi',
+		minZoom: 3,
+		transparent: 'true',
+		format: 'image/png'
+	}),
+}; 
+
 //Drinkwater inname locaties - eerst symbolen dan locaties
 var cm_dw_options = {
 	weight: 2,
