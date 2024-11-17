@@ -56,7 +56,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, RWZIs, DrinkW, DWBedrijven, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, RWZIs, DrinkW, DWBedrijven, DW_GWB, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, Topkaarten, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -143,6 +143,7 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[Wateraanvoer.name]: Wateraanvoer.layer,
 		[DrinkW.name] : DrinkW.layer,
 		[DWBedrijven.name] : DWBedrijven.layer,
+		[DW_GWB.name] : DW_GWB.layer,
 		[NatSys.name]: NatSys.layer,
 		[FysGeo.name]: FysGeo.layer,
 		[Bodem.name]: Bodem.layer,		
