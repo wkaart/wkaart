@@ -936,3 +936,13 @@ const DWBedrijven = {
 		format: 'image/png'
 	}),
 };
+const DW_GWB = {
+	id: 'DW_GWB',
+	name: "<h style='color:darkblue;'>Wb: Drinkwater grondwater <a target='_blank' href='Images/Legenda_DW_GWB.png'>(L)</a> <a target='_blank' href='https://www.atlasleefomgeving.nl/grondwaterbeschermingskaart-rondom-bronnen-voor-drinkwater'>(i)</a>",
+	layer: L.tileLayer.wms('https://data.rivm.nl/geo/alo/ows?',{
+		layers: 'rivm_20240401_gwb2024',
+		transparent: 'true',
+		opacity: 0.75,
+		format: 'image/png'
+	}),
+};
