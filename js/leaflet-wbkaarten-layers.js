@@ -123,6 +123,16 @@ const NoBase = {
 	name: 'Geen achtergrond',
 	layer: L.tileLayer(''),
 };
+//Buitenland
+const Openbasis = {
+	id: 'Openbasis',
+	name: 'T: Buitenland',
+	layer: L.tileLayer('https://www.openbasiskaart.nl/mapcache/wmts/1.0.0/osm/default/rd/{z}/{y}/{x}.png',{
+		attribution: '&copy; <a href="https://www.openstreetmap.org">Openstreetmap</a>',
+		opacity: 0.7,
+		pane: 'BuitenlandPane'
+	}),
+};
 //Layers voor grenzen
 const Prov = {
 	id: 'Prov',
