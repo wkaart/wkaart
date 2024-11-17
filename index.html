@@ -56,7 +56,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, RWZIs, DrinkW, DWBedrijven, DW_GWB, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, Openbasis, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, RWZIs, DrinkW, DWBedrijven, DW_GWB, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, Topkaarten, LuFoZ, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -109,6 +109,8 @@ var map = new L.Map('map', {
   zoomControl: zoomcontrol
 //  layers: lagenaan
 });
+map.createPane('BuitenlandPane');
+map.getPane('BuitenlandPane').style.zIndex = 150;
 map.createPane('kerPrimPane');
 map.getPane('kerPrimPane').style.zIndex = 210;
 map.createPane('svk');
@@ -163,6 +165,7 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[VWkaart.name] : VWkaart.layer,
 		[AHN3.name]: AHN3.layer,
 		[LuFo.name] : LuFo.layer,
+		[Openbasis.name] : Openbasis.layer,
 		[LabGeb.name] : LabGeb.layer,			
 		[LabHoog.name] : LabHoog.layer,
 		[KerPrim.name] : KerPrim.layer,
