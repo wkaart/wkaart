@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+thead input {
+        width: 100%;
+        padding: 1px;
+        box-sizing: border-box;
+    }
+div.container {
+        width: 100%;
+    }
+	body {
+  font-family: Segoe UI;Roboto;Helvetica Neue;Noto Sans;Liberation Sans;Arial;sans-serif;
+	}
+a {
+  text-decoration: none;
+}
+</style>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+  <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+  <meta charset=utf-8 />
+  <title>Schoon voorbeeld kolom</title>
+
+</head>
+  
+<body>
+<!--- Begin tabel --->
+<table id="example" class="display compact" style="width:100%" data-order='[[ 4, "des" ]]'>
+        <thead>
+            <tr>
+                <th>Titel</th>
+                <th>Thema</th>
+                <th>Regio</th>
+                <th>Kernwoorden</th>
+                <th>Datum</th>
+                <th>Instituut</th>
+            </tr>
+			            <tr>
+                <th>Titel</th>
+                <th>Thema</th>
+                <th>Regio</th>
+                <th>Kernwoorden</th>
+                <th>Datum</th>
+                <th>Instituut</th>
+            </tr>
+        </thead>
+        <tbody>
+			<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Verwacht: Verantwoord infiltreren en aanvullen grondwater, STOWA</FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grondwater landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grondwater, infiltreren, vasthouden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45717" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2025-03-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">STOWA</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Verwacht: Results of the Meuse extreme drought Hackathon</FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP><FONT COLOR="#000000">1, 2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grote rivieren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Maas, internationaal, effecten</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45689" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2025-02-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Deltares</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#1155CC"><A HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/301-ontwikkeling-van-de-temperatuur-van-het-rijnwater-van-1978-t-m-2023">Ontwikkeling van de temperatuur van het Rijnwater van 1978 t/m 2023</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grote rivieren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">watertemperatuur, Rijn</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45627" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-12-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">ICBR</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#1155CC"><A HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/299-rapport-over-de-laagwater-en-droogtegebeurtenis-in-2022">Rapport over de laagwater- en droogtegebeurtenis in 2022</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grote rivieren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Rijn, internationaal, laagwater, droogte, effecten</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45627" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-12-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">ICBR</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT COLOR="#0000FF"><A HREF="https://iopscience.iop.org/article/10.1088/2752-5295/ad8d01">Underestimation of meteorological drought intensity due to lengthening of the drought season with climate change</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP><FONT COLOR="#000000">1, 4</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Lengte groeiseizoen, lengte droogteseizoen, neerslagtekort. meteorologie</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45597" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-11-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KNMI</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://edepot.wur.nl/680041">Droogte en droogval van beken in zandgebieden van Nederland</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP><FONT COLOR="#000000">2, 4</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Beekafvoerindex, droogteportaal, zandgronden, KRW</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45597" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-11-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">MinIenW</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.rijksoverheid.nl/documenten/rapporten/2024/11/08/bijlage-2-bijlage-kamerbrief-verkenning-beprijzen-watergebruik">Verkenning beprijzen watergebruik</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Beprijzen, besparen</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45597" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-11-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">MinIenW</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltares.nl/expertise/publicaties/verkennende-systeemanalyse-zuidwestelijke-delta-basisdocument-voor-herijking-integrale-voorkeursstrategie-en-gebiedsprocessen">Verkennende systeemanalyse Zuidwestelijke Delta</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="4" SDNUM="1043;"><FONT COLOR="#000000">4</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Kustgebieden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">basiskennis systeem</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45597" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-11-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Deltares</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.stowa.nl/deltafacts/zoetwatervoorziening/droogte/effecten-klimaatverandering-op-landbouw">Effecten klimaatverandering op de landbouw (Deltafact update)</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">landbouw</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45597" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-11-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">STOWA</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.stowa.nl/publicaties/juridische-mogelijkheden-van-waterschappen-voor-de-aanpak-van-bodemdaling-veenweiden">Juridische mogelijkheden van waterschappen voor de aanpak van bodemdaling in veenweiden</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="4" SDNUM="1043;"><FONT COLOR="#000000">4</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Veen</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">bodemdaling</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45566" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-10-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">STOWA</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.knmi.nl/klimaatdashboard">Klimaatdashboard KNMI</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">trend, verwachting, neerslag, temperatuur, neerslagtekort, SPEI, zeespiegelijkstijging</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45505" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-08-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KNMI</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/297-afvoerscenarios-klimaatverandering-voor-het-rijnstroomgebied">Afvoerscenario's klimaatverandering voor het Rijnstroomgebied</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grote rivieren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Afvoerscenario's, Rijn, internationale vergelijking</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45474" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-07-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">ICBR</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.hdsr.nl/@164927/geschiktheidskaart-nieuwe-woon/">Geschiktheidskaart voor nieuwe woon- en werklocaties Utrecht</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Utrecht</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">ruimtelijke inrichting</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45444" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-06-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Waterschap</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltaprogramma.nl/deltaprogramma/kennisontwikkeling-en-signalering/deltascenarios">Deltascenario's 2024</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">scenario's, wateropgave, sociaal-economische ontwikkeling</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45383" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-04-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Deltares</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.stowa.nl/publicaties/nut-en-noodzaak-van-seizoensverwachtingen-meteo-onderzoek-ten-behoeve-van-het-waterbeheer">Meteo-onderzoek ten behoeve van het waterbeheer: seizoensverwachtingen</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000"><BR></FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45383" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-04-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">STOWA</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/onderzoeksvragen">Zeespiegelstijging - lange termijn denkrichtingen</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Kustgebieden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">verzilting, waterveiligheid, zeewaarts, beschermen, meebewegen</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45352" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-03-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KP ZSS</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://klimaatvalleienveluwe.nl/wp-content/uploads/2024/06/138024-24-004.720-oth-definitief-rapport-deskstudie-Wateraccu-Noord-Veluwe-290324.pdf">Wateraccu Noord-Veluwe</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">water vasthouden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45352" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-03-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Provincie</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://open.overheid.nl/documenten/4e21a636-2092-4a5e-9f4f-8a930c3902d5/file">Concentraat/brijnproblematiek bij toepassing ontziltingstechnologie</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Ontzilting, brijn, waterketen, drinkwater, tuinbouw</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45352" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-03-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">MinIenW</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#1155CC"><A HREF="https://kennisbank.deltares.nl/pub/Details/fullCatalogue/300079310">Verandering afvoerregime Rijn in de toekomst, en impact op zoetwaterbeschikbaarheid, waterveiligheid, natuur en bevaarbaarheid?</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP><FONT COLOR="#000000">1, 2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grote rivieren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">afvoer, Rijn, effect, bevaarbaarheid, waterbeschikbaarheid</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45323" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-02-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000"><BR></FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://edepot.wur.nl/640935">Huidige klimaatrisico's voor de land- en tuinbouw</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landbouw, droogte, extreme neerslag</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45323" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-02-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">WUR</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://klimap.nl/overzicht-maatregelen">Overzicht maatregelen hoge zandgronden</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">effectiviteit en haalbaarheid van maatregelen</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45323" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-02-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KLIMAP</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltares.nl/en/expertise/publications/implications-of-the-knmi23-climate-scenarios-for-the-discharge-of-the-rhine-and-meuse">Implications of the KNMI'23 climate scenarios for the discharge of the Rhine and Meuse</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grote rivieren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Afvoerscenario's, Rijn, Maas</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45261" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2023-12-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Deltares</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/documenten/publicaties/2023/11/09/20231107-9525_tussenbalans-kennisprogramma-zeespiegelstijging_06-webversie">Kennisprogramma zeespiegelstijging tussenbalans</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Kustgebieden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">verzilting, lange termijn</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45231" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2023-11-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KP ZSS</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.knmi.nl/kennis-en-datacentrum/achtergrond/knmi-23-klimaatscenario-s">Klimaatscenario's KNMI 2023</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Klimaatverandering, klimaatscenario, neerslag, verdamping, temperatuur</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45200" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2023-10-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KNMI</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.stowa.nl/publicaties/droogtestatistiek-meteo-onderzoek-ten-behoeve-van-het-waterbeheer-deelrapport-3">Meteo-onderzoek ten behoeve van het waterbeheer: droogtestatistiek</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="5" SDNUM="1043;"><FONT COLOR="#000000">5</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">neerslagtekort, indicatoren, aantal droge dagen</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45200" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2023-10-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">STOWA</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.klimaatadaptatiebrabant.nl/klimaatverhalen/grondwater">Hoe kan het Brabantse grondwater weer structureel omhoog?</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">vasthouden, besparen, infiltreren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45139" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2023-08-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Provincie</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/documenten/publicaties/2023/06/05/systeemanalyse-kpzss-grondwaterverzilting-en-watervraag-bij-een-stijgende-zeespiegel">Systeemanalyse KPZSS Grondwaterverzilting bij een stijgende zeespiegel</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Kustgebieden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">verzilting, grondwater, lange termijn</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45078" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2023-06-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KP ZSS</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><U><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.rijksoverheid.nl/documenten/publicaties/2023/06/05/systeemverkenningen-kennisprogramma-zeespiegelstijging">Systeemanalyses KPZSS verzilting</A></FONT></U></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="1" SDNUM="1043;"><FONT COLOR="#000000">1</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Kustgebieden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">verzilting, Amsterdam-Rijnkanaal, Volkerak-Zoommeer, IJsselmeergebied, Rijn-Maasmonding</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45078" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2023-06-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">KP ZSS</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.groenmonitor.nl/sites/default/files/droogteschade_grasland_15aug2022.pdf">Grasland heeft serieuze droogteschade in 2022, maar minder erg dan in 2018</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">landbouw</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="44774" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2022-08-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">WUR</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://open.rijkswaterstaat.nl/open-overheid/onderzoeksrapporten/%4056511/klimaatbestendige-netwerken-kbn/">Klimaatbestendige netwerken Stresstest hoofdvaarwegennet Deelrapport droogte</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Grote rivieren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">scheepvaart, lage afvoeren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="44652" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2022-04-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">RWS</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://edepot.wur.nl/568574">oplossingsrichtingen voor een hydrologisch goed functionerend grondwatersysteem in de zandgebieden</A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="3" SDNUM="1043;"><FONT COLOR="#000000">3</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">vasthouden, besparen, infiltreren</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="44652" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2022-04-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000"><BR></FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.natuurkennis.nl/Uploaded_files/Publicaties/obn-droogte-11mei21.332b60.pdf">Droogte ingrijpend voor natuur in hoog Nederland </A></FONT></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">natuur</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="44317" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2021-05-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">VBN/OBNE</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><U><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltares.nl/expertise/publicaties/vervolg-indirecte-bedreigingen-nadere-kwantificatie-impact-op-scheepvaart">Nadere kwantificatie impact maatregelen op scheepvaart</A></FONT></U></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Hoofdvaarwegen</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Scheepvaart, Waterverdeling HWS</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45597" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-11-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Deltares</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><U><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltares.nl/expertise/publicaties/vervolg-stresstest-indirecte-bedreigingen-systeembeschrijving-hoofdwatersysteem">Vervolg Stresstest Indirecte Bedreigingen scheepvaart, Systeembeschrijving Hoofdwatersysteem</A></FONT></U></TD>
+			<TD ALIGN=CENTER VALIGN=TOP><FONT COLOR="#000000">2, 5</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Hoofdvaarwegen</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Scheepvaart, Waterverdeling HWS</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45292" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-01-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Deltares</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><U><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.deltares.nl/expertise/publicaties/droogte-van-2022-een-brede-analyse-van-de-ernst-en-maatschappelijke-gevolgen-achtergrondrapport">Droogte van 2022: een brede analyse van de ernst en maatschappelijke gevolgen</A></FONT></U></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="2" SDNUM="1043;"><FONT COLOR="#000000">2</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Effecten, droogte, 2022</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP SDVAL="45352" SDNUM="1043;0;JJJJ-MM-DD"><FONT COLOR="#000000">2024-03-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Deltares</FONT></TD>
+		</TR>
+		<TR>
+			<TD  ALIGN=LEFT VALIGN=TOP><U><FONT FACE="Cambria" COLOR="#0000FF"><A HREF="https://www.waddenacademie.nl/en/news/news-archive-item/rapport-over-zoetwaterbeschikbaarheid-waddengebied-verschenen/">Waterbeschikbaarheid Noord-Nederland</A></FONT></U></TD>
+			<TD ALIGN=CENTER VALIGN=TOP SDVAL="5" SDNUM="1043;"><FONT COLOR="#000000">5</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">IJsselmeergebied</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Waterverdeling, Waddenacademie</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP ><FONT COLOR="#000000">2024-05-01</FONT></TD>
+			<TD ALIGN=LEFT VALIGN=TOP><FONT COLOR="#000000">Waddenacademie</FONT></TD>
+		</TR>
+
+
+
+   </tbody>
+   
+   
+        <tfoot>
+            <tr>
+                <th>Titel</th>
+                <th>Thema</th>
+                <th>Regio</th>
+                <th>Kernwoorden</th>
+                <th>Datum</th>
+                <th>Instituut</th>
+            </tr>
+        </tfoot>
+    </table>
+	
+
+	
+<script>
+DataTable.defaults.column.orderSequence = ['asc', 'desc'];
+
+new DataTable('#example', {
+    initComplete: function () {
+		
+        this.api()
+            .columns()
+            .every(function () {
+                let column = this;
+                let title = column.header().textContent;
+ 
+                // Create input element
+                let input = document.createElement('input');
+                input.placeholder = title;
+                column.header().replaceChildren(input);
+ 
+                // Event listener for user input
+                input.addEventListener('keyup', () => {
+                    if (column.search() !== this.value) {
+                        column.search(input.value).draw();
+                    }
+                });
+            });
+    },
+	paging: false,
+	language:{
+		search: "Zoek:",
+		entries:{
+			_: 'rijen',
+			1: 'rij'
+		},
+		info: 'Toont _TOTAL_ _ENTRIES-TOTAL_',
+		infoFiltered: 'van _MAX_ rijen',
+//	columnDefs:[
+//		{
+//			targets: 4,
+//			render: DataTable.render.date()
+//		}
+//	]
+	},
+
+});
+
+</script>	
+
+
+
+</body>
