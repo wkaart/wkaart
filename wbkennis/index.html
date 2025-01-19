@@ -9,6 +9,7 @@ thead input {
     }
 div.container {
         width: 100%;
+		max-width: 1200px;
     }
 	body {
  font-family: Segoe UI;Roboto;Helvetica Neue;Noto Sans;Liberation Sans;Arial;sans-serif;
@@ -20,645 +21,503 @@ a {
 </style >
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.0/css/buttons.dataTables.css" />
   <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
-
+  <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"> </script>
+  <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.dataTables.js "></script>
+  <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.colVis.min.js "></script>
   <meta charset=utf-8 />
   <title>Kennis waterbeschikbaarheid</title>
 
 </head>
   
 <body>
+
+<div style="max-width:1200px;margin:auto">
 <!--- Tabel als kop --->
-<TABLE  class = "display" BORDER=1 BORDERCOLOR="#ffffff" CELLPADDING=4 CELLSPACING=0 style="width:100%; max-width:1200px; margin-left: auto; margin-right: auto; " >
+<TABLE  class = "display" BORDER=1 BORDERCOLOR="#ffffff" CELLPADDING=4 CELLSPACING=0 style="width:100%; margin-left: auto; margin-right: auto; " >
 
 	<TR>
-		<TD COLSPAN=2 WIDTH=100%  BGCOLOR="#01689b"
-			><FONT COLOR="#ffffff"><FONT FACE="Calibri, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Waterbeschikbaarheid
+		<TD COLSPAN=2 WIDTH=100%  BGCOLOR="#01689b" ALIGN=CENTER
+			><FONT COLOR="#ffffff"><FONT FACE="Segoe UI"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Waterbeschikbaarheid
 			&ndash; publicaties, factsheets en monitoring</B></FONT></FONT></FONT>
 		</TD>
 	</TR>
 	<TR>
 		<TD COLSPAN=2 WIDTH=100%  
-			><FONT COLOR="#000000"><FONT FACE="Calibri, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Vier
+			><FONT COLOR="#000000"><FONT FACE="Segoe UI"><FONT SIZE=2 STYLE="font-size: 12pt"><B>Vier
 			thema's:</B></FONT></FONT></FONT>
 		</TD>
 	</TR>
 	<TR >
 		<TD WIDTH=50% BGCOLOR="#202f5a">
-			<FONT COLOR="#ffffff"><META NAME="CHANGEDBY" CONTENT="Bi Newname"><FONT FACE="Calibri, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>1.
+			<FONT COLOR="#ffffff"><META NAME="CHANGEDBY" CONTENT="Bi Newname"><FONT FACE="Segoe UI"><FONT SIZE=2 STYLE="font-size: 11pt"><B>1.
 			Ontwikkeling van wateraanbod en watervraag</B></FONT></FONT></FONT>
 		</TD>
 		<TD WIDTH=50% BGCOLOR="#d09443">
-			<FONT COLOR="#ffffff"><FONT FACE="Calibri, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>2.
+			<FONT COLOR="#ffffff"><FONT FACE="Segoe UI"><FONT SIZE=2 STYLE="font-size: 11pt"><B>2.
 			Effecten en schade van waterschaarste</B></FONT></FONT></FONT>
 		</TD>
 	</TR>
 	<TR >
 		<TD WIDTH=50% BGCOLOR="#40b5e5">
-			<FONT COLOR="#ffffff"><FONT FACE="Calibri, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>3.
+			<FONT COLOR="#ffffff"><FONT FACE="Segoe UI"><FONT SIZE=2 STYLE="font-size: 11pt"><B>3.
 			Oplossingen en maatregelen</B></FONT></FONT></FONT>
 		</TD>
 		<TD WIDTH=50% BGCOLOR="#db5811">
-			<FONT COLOR="#ffffff"><FONT FACE="Calibri, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>4.
+			<FONT COLOR="#ffffff"><FONT FACE="Segoe UI"><FONT SIZE=2 STYLE="font-size: 11pt"><B>4.
 			Komen tot keuzen en uitvoering</B></FONT></FONT></FONT>
 		</TD>
 	</TR>
 </TABLE>
 
-<div>
+
 <!--- Begin tabel --->
-<table id="example" class="display compact"  data-order='[[ 4, "des" ]]' style="width:100%; max-width:1200px" >
+<table id="example" class="display compact"  data-order='[[ 3, "des" ]]' style="width:100%; max-width:1200px" >
         <thead>
             <tr>
                 <th>Titel</th>
                 <th>Thema</th>
                 <th>Regio</th>
                 <th>Datum</th>
-                <th>Gebied</th>
-                <th>Compartiment</th>
-				<th>Instituut</th>
-                <th>Hydro thema</th>
-                <th>Gebruikers</th>
-                <th>Maatregeltype</th>
-                <th>Type informatie</th>
-                <th>Overig</th>
+                <th>Partijen of programma</th>
+                <th>Kernwoorden</th>
+				<th>Opm</th>
             </tr>
 			            <tr>
                 <th>Titel</th>
                 <th>Thema</th>
                 <th>Regio</th>
                 <th>Datum</th>
-                <th>Gebied</th>
-                <th>Compartiment</th>
-				<th>Instituut</th>
-                <th>Hydro thema</th>
-                <th>Gebruikers</th>
-                <th>Maatregeltype</th>
-                <th>Type informatie</th>
-                <th>Overig</th>
+                <th>Partijen of programma</th>
+                <th>Kernwoorden</th>
+				<th>Opm</th>
             </tr>
         </thead>
         <tbody>
 
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#1155CC"><A target="_blank" HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/301-ontwikkeling-van-de-temperatuur-van-het-rijnwater-van-1978-t-m-2023">Ontwikkeling van de temperatuur van het Rijnwater van 1978 t/m 2023, ICBR</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#1155CC"><A target="_blank"  HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/301-ontwikkeling-van-de-temperatuur-van-het-rijnwater-van-1978-t-m-2023">Ontwikkeling van de temperatuur van het Rijnwater van 1978 t/m 2023,</A></FONT> ICBR</TD>
 			<TD ALIGN=RIGHT SDVAL="1" SDNUM="1043;"><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grote rivieren</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-12</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Rijn, internationaal</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">ICBR</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">watertemperatuur, waterkwaliteit</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, rijn, internationaal, watertemperatuur, waterkwaliteit</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT>Geen</TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#1155CC"><A target="_blank" HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/299-rapport-over-de-laagwater-en-droogtegebeurtenis-in-2022">Rapport over de laagwater- en droogtegebeurtenis in 2022, ICBR</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#1155CC"><A target="_blank"  HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/299-rapport-over-de-laagwater-en-droogtegebeurtenis-in-2022">Rapport over de laagwater- en droogtegebeurtenis in 2022,</A></FONT> ICBR</TD>
 			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grote rivieren</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-12</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Rijn, internationaal</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">ICBR</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">laagwater, neerslagtekort, droogte</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Effecten</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, rijn, internationaal,laagwater, neerslagtekort, droogte</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://iopscience.iop.org/article/10.1088/2752-5295/ad8d01">Underestimation of meteorological drought intensity due to lengthening of the drought season with climate change, KNMI</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://iopscience.iop.org/article/10.1088/2752-5295/ad8d01">Underestimation of meteorological drought intensity due to lengthening of the drought season with climate change,</A></FONT> KNMI</TD>
 			<TD ALIGN=RIGHT SDVAL="1,4" SDNUM="1043;"><FONT FACE="Segoe UI">1,4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KNMI</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Lengte groeiseizoen, lengte droogteseizoen, neerslagtekort. meteorologie</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">meteorologie, neerslagtekort, groeiseizoen, droogteseizoen</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://edepot.wur.nl/680041">Droogte en droogval van beken in zandgebieden van Nederland, DPZW</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://edepot.wur.nl/680041">Droogte en droogval van beken in zandgebieden van Nederland,</A></FONT> DPZW</TD>
 			<TD ALIGN=RIGHT SDVAL="2,4" SDNUM="1043;"><FONT FACE="Segoe UI">2,4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">MinIenW</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, Beekafvoerindex, waterkwaliteit, droogteportaal, zandgronden, KRW, MinIenw, DPZW</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">MinIenW, DPZW</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, Beekafvoerindex, waterkwaliteit, KRW</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.rijksoverheid.nl/documenten/rapporten/2024/11/08/bijlage-2-bijlage-kamerbrief-verkenning-beprijzen-watergebruik">Verkenning beprijzen watergebruik, MinIenW</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.rijksoverheid.nl/documenten/rapporten/2024/11/08/bijlage-2-bijlage-kamerbrief-verkenning-beprijzen-watergebruik">Verkenning beprijzen watergebruik,</A></FONT> MinIenW</TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">MinIenW</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, Beprijzen, besparen</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, beprijzen, besparen</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltares.nl/expertise/publicaties/verkennende-systeemanalyse-zuidwestelijke-delta-basisdocument-voor-herijking-integrale-voorkeursstrategie-en-gebiedsprocessen">Verkennende systeemanalyse Zuidwestelijke Delta, Deltares MinIenW</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltares.nl/expertise/publicaties/verkennende-systeemanalyse-zuidwestelijke-delta-basisdocument-voor-herijking-integrale-voorkeursstrategie-en-gebiedsprocessen">Verkennende systeemanalyse Zuidwestelijke Delta,</A></FONT> Deltares MinIenW</TD>
 			<TD ALIGN=RIGHT SDVAL="4" SDNUM="1043;"><FONT FACE="Segoe UI">4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Kustgebieden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, basiskennis systeem</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, systeemkennis</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.stowa.nl/deltafacts/zoetwatervoorziening/droogte/effecten-klimaatverandering-op-landbouw">Effecten klimaatverandering op de landbouw, STOWA (Deltafact update)</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.stowa.nl/deltafacts/zoetwatervoorziening/droogte/effecten-klimaatverandering-op-landbouw">Effecten klimaatverandering op de landbouw,</A></FONT> STOWA (Deltafact update)</TD>
 			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">STOWA</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">landbouw</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, landbouw</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.nhv.nu/stroming/nieuws/stromingen-20242-artikel-witte/">Meteorologische droogtemaat zonder groeiseizoen</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.nhv.nu/stroming/nieuws/stromingen-20242-artikel-witte/">Meteorologische droogtemaat zonder groeiseizoen</A></FONT></TD>
 			<TD ALIGN=RIGHT SDVAL="4" SDNUM="1043;"><FONT FACE="Segoe UI">4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Artikel</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">meteorologie, neerslagtekort</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltares.nl/expertise/publicaties/vervolg-indirecte-bedreigingen-nadere-kwantificatie-impact-op-scheepvaart">Nadere kwantificatie impact maatregelen op scheepvaart, RWS Deltares</A></FONT></TD>
-			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltares.nl/expertise/publicaties/vervolg-indirecte-bedreigingen-nadere-kwantificatie-impact-op-scheepvaart">Nadere kwantificatie impact maatregelen op scheepvaart,</A></FONT> RWS Deltares</TD>
+			<TD ALIGN=RIGHT SDVAL="2,3" SDNUM="1043;"><FONT FACE="Segoe UI">2,3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Hoofdvaarwegen</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Scheepvaart, Waterverdeling HWS</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, scheepvaart, waterverdeling</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.stowa.nl/publicaties/juridische-mogelijkheden-van-waterschappen-voor-de-aanpak-van-bodemdaling-veenweiden">Juridische mogelijkheden van waterschappen voor de aanpak van bodemdaling in veenweiden, STOWA</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.stowa.nl/publicaties/juridische-mogelijkheden-van-waterschappen-voor-de-aanpak-van-bodemdaling-veenweiden">Juridische mogelijkheden van waterschappen voor de aanpak van bodemdaling in veenweiden,</A></FONT> STOWA</TD>
 			<TD ALIGN=RIGHT SDVAL="4" SDNUM="1043;"><FONT FACE="Segoe UI">4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Veen</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-10</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">STOWA</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">bodemdaling</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, bodemdaling, juridisch, wetgeving, beleid</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.knmi.nl/klimaatdashboard">Klimaatdashboard KNMI</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.knmi.nl/klimaatdashboard">Klimaatdashboard</A></FONT> KNMI</TD>
 			<TD ALIGN=RIGHT SDVAL="1" SDNUM="1043;"><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-08</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KNMI</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">trend, verwachting, neerslag, temperatuur, neerslagtekort, SPEI, zeespiegelijkstijging</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">neerslag, temperatuur, neerslagtekort, SPEI, zeespiegelstijging, trend, verwachting</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/297-afvoerscenarios-klimaatverandering-voor-het-rijnstroomgebied">Afvoerscenario's klimaatverandering voor het Rijnstroomgebied, ICBR</A></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1a</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.iksr.org/nl/publieksvoorlichting/documenten/archief/rapporten/rapporten-en-brochures-afzonderlijk/297-afvoerscenarios-klimaatverandering-voor-het-rijnstroomgebied">Afvoerscenario's klimaatverandering voor het Rijnstroomgebied,</A></FONT> ICBR</TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grote rivieren</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-07</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">ICBR</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Afvoerscenario's, Rijn, internationale vergelijking</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.hdsr.nl/@164927/geschiktheidskaart-nieuwe-woon/">Geschiktheidskaart voor nieuwe woon- en werklocaties Utrecht</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.hdsr.nl/@164927/geschiktheidskaart-nieuwe-woon/">Geschiktheidskaart voor nieuwe woon- en werklocaties Utrecht</A></FONT></TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Provincie</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-06</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Waterschap</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">ruimtelijke inrichting, woningbouw</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.waddenacademie.nl/en/news/news-archive-item/rapport-over-zoetwaterbeschikbaarheid-waddengebied-verschenen/">Waterbeschikbaarheid Noord-Nederland, Waddenacademie</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.waddenacademie.nl/en/news/news-archive-item/rapport-over-zoetwaterbeschikbaarheid-waddengebied-verschenen/">Waterbeschikbaarheid Noord-Nederland,</A></FONT> Waddenacademie</TD>
 			<TD ALIGN=RIGHT SDVAL="4" SDNUM="1043;"><FONT FACE="Segoe UI">4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">IJsselmeergebied</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-05</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Waddenacademie</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Waterverdeling, Waddenacademie</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://agrarischwaterbeheer.nl/maatregelen/?filterthema=verdroging-vernatting">Maatregelen tegen verdroging, landbouw. DAW</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://agrarischwaterbeheer.nl/maatregelen/?filterthema=verdroging-vernatting">Maatregelen tegen verdroging, landbouw. DAW</A></FONT></TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-05</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">DAW</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landbouw, maatregelen, verdroging, bodem</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltaprogramma.nl/deltaprogramma/kennisontwikkeling-en-signalering/deltascenarios">Deltascenario's 2024, DPZW</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltaprogramma.nl/deltaprogramma/kennisontwikkeling-en-signalering/deltascenarios">Deltascenario's 2024,</A></FONT> DPZW</TD>
 			<TD ALIGN=RIGHT SDVAL="1" SDNUM="1043;"><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-04</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">scenario's, wateropgave, sociaal-economische ontwikkeling</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.stowa.nl/publicaties/nut-en-noodzaak-van-seizoensverwachtingen-meteo-onderzoek-ten-behoeve-van-het-waterbeheer">Meteo-onderzoek ten behoeve van het waterbeheer: seizoensverwachtingen, STOWA</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.stowa.nl/publicaties/nut-en-noodzaak-van-seizoensverwachtingen-meteo-onderzoek-ten-behoeve-van-het-waterbeheer">Meteo-onderzoek ten behoeve van het waterbeheer: seizoensverwachtingen,</A></FONT> STOWA</TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-04</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">STOWA</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">meteorologie</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/onderzoeksvragen">Zeespiegelstijging - lange termijn denkrichtingen, KPZSS</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/onderzoeksvragen">Zeespiegelstijging - lange termijn denkrichtingen,</A></FONT> KPZSS</TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Kustgebieden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-03</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KP ZSS</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">verzilting, waterveiligheid, zeewaarts, beschermen, meebewegen</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://klimaatvalleienveluwe.nl/wp-content/uploads/2024/06/138024-24-004.720-oth-definitief-rapport-deskstudie-Wateraccu-Noord-Veluwe-290324.pdf">Wateraccu Noord-Veluwe, prov Gelderland</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://klimaatvalleienveluwe.nl/wp-content/uploads/2024/06/138024-24-004.720-oth-definitief-rapport-deskstudie-Wateraccu-Noord-Veluwe-290324.pdf">Wateraccu Noord-Veluwe,</A></FONT> prov Gelderland</TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-03</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Provincie</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">water vasthouden</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://open.overheid.nl/documenten/4e21a636-2092-4a5e-9f4f-8a930c3902d5/file">Concentraat/brijnproblematiek bij toepassing ontziltingstechnologie, MinIenW</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://open.overheid.nl/documenten/4e21a636-2092-4a5e-9f4f-8a930c3902d5/file">Concentraat/brijnproblematiek bij toepassing ontziltingstechnologie,</A></FONT> MinIenW</TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-03</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">MinIenW</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Ontzilting, brijn, waterketen, drinkwater, tuinbouw, grondwater</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltares.nl/expertise/publicaties/droogte-van-2022-een-brede-analyse-van-de-ernst-en-maatschappelijke-gevolgen-achtergrondrapport">Droogte van 2022: een brede analyse van de ernst en maatschappelijke gevolgen, Deltares</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltares.nl/expertise/publicaties/droogte-van-2022-een-brede-analyse-van-de-ernst-en-maatschappelijke-gevolgen-achtergrondrapport">Droogte van 2022: een brede analyse van de ernst en maatschappelijke gevolgen,</A></FONT> Deltares</TD>
 			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-03</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Effecten, droogte, 2022</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#1155CC"><A target="_blank" HREF="https://kennisbank.deltares.nl/pub/Details/fullCatalogue/300079310">Verandering afvoerregime Rijn in de toekomst, en impact op zoetwaterbeschikbaarheid, waterveiligheid, natuur en bevaarbaarheid, Deltares</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#1155CC"><A target="_blank"  HREF="https://kennisbank.deltares.nl/pub/Details/fullCatalogue/300079310">Verandering afvoerregime Rijn in de toekomst, en impact op zoetwaterbeschikbaarheid, waterveiligheid, natuur en bevaarbaarheid,</A></FONT> Deltares</TD>
 			<TD ALIGN=RIGHT SDVAL="1,2" SDNUM="1043;"><FONT FACE="Segoe UI">1,2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grote rivieren</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-02</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">afvoer, Rijn, effect, bevaarbaarheid, waterbeschikbaarheid</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://edepot.wur.nl/640935">Huidige klimaatrisico's voor de land- en tuinbouw, WUR</A></FONT></TD>
-			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://edepot.wur.nl/640935">Huidige klimaatrisico's voor de land- en tuinbouw,</A></FONT> WUR</TD>
+ 		<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-02</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">WUR</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landbouw, droogte, extreme neerslag</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://klimap.nl/overzicht-maatregelen">Overzicht maatregelen hoge zandgronden, KLIMAP</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://klimap.nl/overzicht-maatregelen">Overzicht maatregelen hoge zandgronden,</A></FONT> KLIMAP</TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-02</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KLIMAP</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">effectiviteit en haalbaarheid van maatregelen</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltares.nl/expertise/publicaties/vervolg-stresstest-indirecte-bedreigingen-systeembeschrijving-hoofdwatersysteem">Vervolg Stresstest Indirecte Bedreigingen scheepvaart, Systeembeschrijving Hoofdwatersysteem, RWS</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltares.nl/expertise/publicaties/vervolg-stresstest-indirecte-bedreigingen-systeembeschrijving-hoofdwatersysteem">Vervolg Stresstest Indirecte Bedreigingen scheepvaart, Systeembeschrijving Hoofdwatersysteem,</A></FONT> RWS</TD>
 			<TD ALIGN=RIGHT SDVAL="2,4" SDNUM="1043;"><FONT FACE="Segoe UI">2,4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Hoofdvaarwegen</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-01</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Scheepvaart, Waterverdeling HWS</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltares.nl/en/expertise/publications/implications-of-the-knmi23-climate-scenarios-for-the-discharge-of-the-rhine-and-meuse">Implications of the KNMI'23 climate scenarios for the discharge of the Rhine and Meuse, Deltares</A></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1a</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltares.nl/en/expertise/publications/implications-of-the-knmi23-climate-scenarios-for-the-discharge-of-the-rhine-and-meuse">Implications of the KNMI'23 climate scenarios for the discharge of the Rhine and Meuse, Deltares</A></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grote rivieren</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-12</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Afvoerscenario's, Rijn, Maas</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/documenten/publicaties/2023/11/09/20231107-9525_tussenbalans-kennisprogramma-zeespiegelstijging_06-webversie">Kennisprogramma zeespiegelstijging tussenbalans, KPZSS</A></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1a</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/documenten/publicaties/2023/11/09/20231107-9525_tussenbalans-kennisprogramma-zeespiegelstijging_06-webversie">Kennisprogramma zeespiegelstijging tussenbalans,</A></FONT> KPZSS</TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Kustgebieden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-11</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KP ZSS</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">verzilting, lange termijn</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.knmi.nl/kennis-en-datacentrum/achtergrond/knmi-23-klimaatscenario-s">Klimaatscenario's KNMI 2023</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.knmi.nl/kennis-en-datacentrum/achtergrond/knmi-23-klimaatscenario-s">Klimaatscenario's 2023</A></FONT> KNMI</TD>
 			<TD ALIGN=RIGHT SDVAL="1" SDNUM="1043;"><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-10</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KNMI</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Klimaatverandering, klimaatscenario, neerslag, verdamping, temperatuur</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.stowa.nl/publicaties/droogtestatistiek-meteo-onderzoek-ten-behoeve-van-het-waterbeheer-deelrapport-3">Meteo-onderzoek ten behoeve van het waterbeheer: droogtestatistiek, STOWA</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.stowa.nl/publicaties/droogtestatistiek-meteo-onderzoek-ten-behoeve-van-het-waterbeheer-deelrapport-3">Meteo-onderzoek ten behoeve van het waterbeheer: droogtestatistiek,</A></FONT> STOWA</TD>
 			<TD ALIGN=RIGHT SDVAL="4" SDNUM="1043;"><FONT FACE="Segoe UI">4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-10</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">STOWA</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">neerslagtekort, indicatoren, aantal droge dagen</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.klimaatadaptatiebrabant.nl/klimaatverhalen/grondwater">Hoe kan het Brabantse grondwater weer structureel omhoog? prov Noord-Brabant</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.klimaatadaptatiebrabant.nl/klimaatverhalen/grondwater">Hoe kan het Brabantse grondwater weer structureel omhoog?</A></FONT> prov Noord-Brabant</TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-08</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Provincie</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">vasthouden, besparen, infiltreren</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/documenten/publicaties/2023/06/05/systeemanalyse-kpzss-grondwaterverzilting-en-watervraag-bij-een-stijgende-zeespiegel">Systeemanalyse KPZSS Grondwaterverzilting bij een stijgende zeespiegel</A></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1a</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.deltaprogramma.nl/kennisprogramma-zeespiegelstijging/documenten/publicaties/2023/06/05/systeemanalyse-kpzss-grondwaterverzilting-en-watervraag-bij-een-stijgende-zeespiegel">Systeemanalyse KPZSS Grondwaterverzilting bij een stijgende zeespiegel,</A></FONT> KPZSS</TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Kustgebieden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-06</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KP ZSS</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">verzilting, grondwater, lange termijn</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.rijksoverheid.nl/documenten/publicaties/2023/06/05/systeemverkenningen-kennisprogramma-zeespiegelstijging">Systeemanalyses KPZSS verzilting</A></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1a</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.rijksoverheid.nl/documenten/publicaties/2023/06/05/systeemverkenningen-kennisprogramma-zeespiegelstijging">Systeemanalyses KPZSS verzilting,</A></FONT> KPZSS</TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">1</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Kustgebieden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-06</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KP ZSS</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">verzilting, Amsterdam-Rijnkanaal, Volkerak-Zoommeer, IJsselmeergebied, Rijn-Maasmonding</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://open.rijkswaterstaat.nl/zoeken/@253589/droogteseizoen-2022-terugblik-wmcn-lcw/">Droogteseizoen 2022, terugblik WMCN-LCW</A>&nbsp;(en&nbsp;<A target="_blank" HREF="https://open.rijkswaterstaat.nl/zoeken/@183883/droogteseizoen-2020-terugblik-wmcn-lcw">2020,</A>&nbsp;<A target="_blank" HREF="https://open.rijkswaterstaat.nl/zoeken/@143511/droogteseizoen-2019-terugblik-wmcn-lcw">2019 en&nbsp;</A><A target="_blank" HREF="https://open.rijkswaterstaat.nl/zoeken/@101620/droogteseizoen-2018-lcw-terugblik/">2018)</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://open.rijkswaterstaat.nl/zoeken/@253589/droogteseizoen-2022-terugblik-wmcn-lcw/">Droogteseizoen 2022, terugblik </A>WMCN-LCW&nbsp;(en&nbsp;<A target="_blank"  HREF="https://open.rijkswaterstaat.nl/zoeken/@183883/droogteseizoen-2020-terugblik-wmcn-lcw">2020,</A>&nbsp;<A target="_blank"  HREF="https://open.rijkswaterstaat.nl/zoeken/@143511/droogteseizoen-2019-terugblik-wmcn-lcw">2019 en&nbsp;</A><A target="_blank"  HREF="https://open.rijkswaterstaat.nl/zoeken/@101620/droogteseizoen-2018-lcw-terugblik/">2018)</A></FONT></TD>
 			<TD ALIGN=RIGHT SDVAL="2,3" SDNUM="1043;"><FONT FACE="Segoe UI">2,3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2022-12</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">LCW</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Evaluatie, maatregelen, effecten</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.groenmonitor.nl/sites/default/files/droogteschade_grasland_15aug2022.pdf">Grasland heeft serieuze droogteschade in 2022, maar minder erg dan in 2018, groenmonitor</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.groenmonitor.nl/sites/default/files/droogteschade_grasland_15aug2022.pdf">Grasland heeft serieuze droogteschade in 2022, maar minder erg dan in 2018,</A></FONT> groenmonitor</TD>
 			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2022-08</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">WUR</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">landbouw</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://open.rijkswaterstaat.nl/open-overheid/onderzoeksrapporten/%4056511/klimaatbestendige-netwerken-kbn/">Klimaatbestendige netwerken Stresstest hoofdvaarwegennet Deelrapport droogte, RWS</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://open.rijkswaterstaat.nl/open-overheid/onderzoeksrapporten/%4056511/klimaatbestendige-netwerken-kbn/">Klimaatbestendige netwerken Stresstest hoofdvaarwegennet Deelrapport droogte,</A></FONT> RWS</TD>
 			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grote rivieren</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2022-04</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">RWS</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">scheepvaart, lage afvoeren</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://edepot.wur.nl/568574">oplossingsrichtingen voor een hydrologisch goed functionerend grondwatersysteem in de zandgebieden</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://edepot.wur.nl/568574">oplossingsrichtingen voor een hydrologisch goed functionerend grondwatersysteem in de zandgebieden</A></FONT></TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2022-04</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">vasthouden, besparen, infiltreren</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://www.natuurkennis.nl/Uploaded_files/Publicaties/obn-droogte-11mei21.332b60.pdf">Droogte ingrijpend voor natuur in hoog Nederland, VBN/OBNE</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://www.natuurkennis.nl/Uploaded_files/Publicaties/obn-droogte-11mei21.332b60.pdf">Droogte ingrijpend voor natuur in hoog Nederland,</A></FONT> VBN/OBNE</TD>
 			<TD ALIGN=RIGHT SDVAL="2" SDNUM="1043;"><FONT FACE="Segoe UI">2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2021-05</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">VBN/OBNE</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">natuur</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank" HREF="https://op.europa.eu/en/publication-detail/-/publication/7d148604-faf0-11e5-b713-01aa75ed71a1/language-en">Guidance document on the application of water balances for supporting the implementation of the WFD. EU</A></FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI" COLOR="#0000FF"><A target="_blank"  HREF="https://op.europa.eu/en/publication-detail/-/publication/7d148604-faf0-11e5-b713-01aa75ed71a1/language-en">Guidance document on the application of water balances for supporting the implementation of the WFD.</A></FONT> EU</TD>
 			<TD ALIGN=RIGHT SDVAL="4" SDNUM="1043;"><FONT FACE="Segoe UI">4</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2015-05</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">EU</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Waterbalansen, Europa, internationaal</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI">Verwacht: Verantwoord infiltreren en aanvullen grondwater, STOWA</FONT></TD>
+			<TD HEIGHT=17 ALIGN=LEFT><FONT FACE="Segoe UI">Verwacht: Verantwoord infiltreren en aanvullen grondwater, STOWA</FONT></TD>
 			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">STOWA</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grondwater, infiltreren, vasthouden</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		<TR>
-			<TD  ALIGN=LEFT><FONT FACE="Segoe UI">Verwacht: Results of the Meuse extreme drought Hackathon</FONT></TD>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI">Verwacht: Results of the Meuse extreme drought Hackathon</FONT></TD>
 			<TD ALIGN=RIGHT SDVAL="1,2" SDNUM="1043;"><FONT FACE="Segoe UI">1,2</FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grote rivieren</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares</FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
-			<TD ALIGN=LEFT><FONT FACE="Segoe UI"><BR></FONT></TD>
 			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, Maas, internationaal, effecten</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI"><A target="_blank"  HREF="https://library.kwrwater.nl/publication/71685755/interventies-in-het-watersysteem/">Interventies in het watersysteem</A>, KWR</FONT></TD>
+			<TD ALIGN=RIGHT SDVAL="3,4" SDNUM="1043;"><FONT FACE="Segoe UI">3,4</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-04</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KWR, WICE</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, modellen, systeemkennis</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI"><A target="_blank"  HREF="https://library.kwrwater.nl/publication/68839218/beschikbare-kennis-van-stromen-in-het-watersysteem-dataverzameling-voor-conceptuele-watersysteemmodellen/">Beschikbare kennis van stromen in het watersysteem</A>, KWR</FONT></TD>
+			<TD ALIGN=RIGHT SDVAL="4" SDNUM="1043;"><FONT FACE="Segoe UI">4</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2022-07</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KWR, WICE</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, meetgegevens, monitoring, systeemkennis</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI"><A target="_blank"  HREF="https://library.kwrwater.nl/publication/69265309/juridisch-kader-aanvulling-watersysteem-met-industrieel-restwater/">Juridisch kader aanvulling watersysteem met industrieel restwater</A>, KWR</FONT></TD>
+			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2022-07</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KWR, WICE</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, juridisch, wetgeving, waterketen, infiltratie</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI"><A target="_blank"  HREF="https://api.kwrwater.nl//uploads/2024/01/KWR-2023.062-Effect-waterbesparing-stedelijk-gebied-op-regionale-watersysteem-Casus-SUPERLOCAL-(OPENBAAR).pdf">Effect van waterbesparing in stedelijk gebied op het regionale watersysteem, casus Superlocal</A>, KWR</FONT></TD>
+			<TD ALIGN=RIGHT SDVAL="3" SDNUM="1043;"><FONT FACE="Segoe UI">3</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Landelijk</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2023-12</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KWR, WICE</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, waterbesparing,hergebruik, waterbalans, model, waterketen, stedelijk</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI"><A target="_blank"  HREF="https://library.kwrwater.nl/publication/71685248/inzicht-in-het-watersysteem-door-toepassing-van-een-systeemmodel/">Inzicht in het watersysteem door toepassing van een systeemmodel</A>, KWR</FONT></TD>
+			<TD ALIGN=RIGHT SDVAL="3,4" SDNUM="1043;"><FONT FACE="Segoe UI">3,4</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-04</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">KWR, WICE</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater, watrebalans, model</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI"><A target="_blank"  HREF="https://research.wur.nl/en/publications/droogte-in-zandgebieden-van-zuid-midden-en-oost-nederland-het-ver-2">Droogte in zandgebieden van Zuid-, Midden- en Oost-Nederland : het verhaal - analyse van droogte 2018 en 2019 en bevindingen : eindrapport</A></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2, 3, 4</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Zandgronden</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2021-10</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Grondwater, vasthouden, bergen, waterbalans, model</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=19 ALIGN=LEFT><FONT FACE="Segoe UI"><A target="_blank"  HREF="https://www.stowa.nl/publicaties/waterkwantiteit-het-veen-watervraag-watertekort-en-wateroverlast-door-waterinfiltratiemaatregelen-en">Waterkwantiteit in het veen. Watervraag, watertekort en wateroverlast door waterinfiltratiemaatregelen en vernatting in het veenweidegebied</A>,</FONT> Stowa</TD>
+			<TD ALIGN=RIGHT SDVAL="1,3" SDNUM="1043;"><FONT FACE="Segoe UI">1,3</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Veen</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">2024-11</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Deltares, Acacia</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI">Oppervlaktewater, grondwater</FONT></TD>
+			<TD ALIGN=LEFT><FONT FACE="Segoe UI"></FONT></TD>
 		</TR>
 		
    </tbody>
@@ -669,14 +528,9 @@ a {
                 <th>Thema</th>
                 <th>Regio</th>
                 <th>Datum</th>
-                <th>Gebied</th>
-                <th>Compartiment</th>
-				<th>Instituut</th>
-                <th>Hydro thema</th>
-                <th>Gebruikers</th>
-                <th>Maatregeltype</th>
-                <th>Type informatie</th>
-                <th>Overig</th>
+                <th>Partijen of programma</th>
+                <th>Kernwoorden</th>
+				<th>Opm</th>
             </tr>
         </tfoot>
     </table>
@@ -718,15 +572,26 @@ let table = new DataTable('#example', {
 		},
 		info: 'Toont _TOTAL_ _ENTRIES-TOTAL_',
 		infoFiltered: 'van _MAX_ rijen',
+	    buttons: {
+            colvis: 'Kolommen'
+        }
 	},
 	columnDefs: [
-       { targets: [4, 5, 6, 7, 8, 9, 10, 11], visible: false},
+       { targets: [4, 5, 6], visible: false},
 		{ className: 'dt-center', target: 1},
 // Setting a small width seems to prevent too large column width after initcomplete function
 		{ width: '2px', target: 1},
 		{ width: '2px', target: 2},
-		{ width: '2px', target: 3}
+		{ width: '2px', target: 3},
+		{ width: '2px', target: 4},
+		{ width: '2px', target: 5},
+		{ width: '2px', target: 6}
     ],
+	layout: {
+        topStart: {
+            buttons: ['colvis']
+        }
+    }
 });
 
 </script>	
