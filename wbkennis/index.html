@@ -38,7 +38,7 @@ a {
 
 	<TR>
 		<TD COLSPAN=2 WIDTH=100%  BGCOLOR="#01689b" ALIGN=CENTER
-			><FONT COLOR="#ffffff"><FONT "><FONT SIZE=3 STYLE="font-size: 13pt"><B>Waterbeschikbaarheid
+			><FONT COLOR="#ffffff"><FONT "><FONT SIZE=4 STYLE="font-size: 16pt"><B>Waterbeschikbaarheid
 			&ndash; publicaties, factsheets en monitoring</B>
 		</TD>
 	</TR>
@@ -49,23 +49,23 @@ a {
 		</TD>
 	</TR>
 	<TR >
-		<TD WIDTH=50% BGCOLOR="#202f5a">
+		<TD WIDTH=50% BGCOLOR="#202f5a" VALIGN=TOP>
 			<FONT COLOR="#ffffff"><META NAME="CHANGEDBY" CONTENT="Bi Newname"><FONT "><FONT SIZE=2 STYLE="font-size: 11pt"><B>1.
-			Ontwikkeling van wateraanbod en watervraag</B>
+			Ontwikkeling van wateraanbod en watervraag</B> <br/> Toekomstige ontwikkeling waterbeschikbaarheid, klimaatfactoren en watervraag.
 		</TD>
-		<TD WIDTH=50% BGCOLOR="#d09443">
+		<TD WIDTH=50% BGCOLOR="#d09443" VALIGN=TOP>
 			<FONT COLOR="#ffffff"><FONT "><FONT SIZE=2 STYLE="font-size: 11pt"><B>2.
-			Effecten en schade van waterschaarste</B>
+			Effecten en schade van waterschaarste</B><br/>Weerbaarheid en kwetsbaarheid natuur, schade en effecten van waterschaarste, veranderingen in landschap, natuur en landbouw.
 		</TD>
 	</TR>
 	<TR >
-		<TD WIDTH=50% BGCOLOR="#40b5e5">
+		<TD WIDTH=50% BGCOLOR="#40b5e5" VALIGN=TOP>
 			<FONT COLOR="#ffffff"><FONT "><FONT SIZE=2 STYLE="font-size: 11pt"><B>3.
-			Oplossingen en maatregelen</B>
+			Oplossingen en maatregelen</B><br/>Ruimtelijke inrichting en aanpassen door watergebruikers, besparen, vasthouden, verdelen.
 		</TD>
-		<TD WIDTH=50% BGCOLOR="#db5811">
+		<TD WIDTH=50% BGCOLOR="#db5811" VALIGN=TOP>
 			<FONT COLOR="#ffffff"><FONT "><FONT SIZE=2 STYLE="font-size: 11pt"><B>4.
-			Komen tot keuzen en uitvoering</B>
+			Komen tot keuzen en uitvoering</B><br/>Indicatoren, monitoring en data, modellen, ondersteuning van besluitvorming, governance, waterbewustzijn.
 		</TD>
 	</TR>
 </TABLE>
@@ -842,11 +842,15 @@ let table = new DataTable('#example', {
     },
 	paging: true,
     lengthMenu: [
-        [25, 50, -1],
-        [25, 50, 'All']
+        [25, 50, -1, 10],
+        [25, 50, 'Alle', 10]
     ],	
+	labels:{
+		perPage: "rijen per pagina"
+	},
 	language:{
 		search: "Zoek:",
+		lengthMenu: "_MENU_ _ENTRIES_ per pagina",
 		entries:{
 			_: 'rijen',
 			1: 'rij'
@@ -857,6 +861,7 @@ let table = new DataTable('#example', {
             colvis: 'Kolommen'
         }
 	},
+
 	columnDefs: [
        { targets: [4, 5, 6], visible: false},
 		{ className: 'dt-center', target: 1},
