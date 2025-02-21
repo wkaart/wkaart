@@ -104,13 +104,6 @@ const Topkaarten = {
 	name: 'Topkaarten', 
 	layer: L.layerGroup([BRT,Top1000,Top500,Top250,Top100,Top50,Top25,Top10NL,BGTStandaard,BGTIcoon]),
 };
-const LuFoZ = {
-	id: 'LuFoZ',
-	name: 'A: Luchtfoto zomer (25cm)',
-	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:28992/{z}/{x}/{y}.jpeg',{
-				attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
-	}),
-};
 const LuFoW = {
 	id: 'LuFoW',
 	name: 'A: Luchtfoto winter (8cm)',
@@ -241,7 +234,7 @@ const RWSdis = {
 const LuFo = {
 	id: 'LuFo',
 	name: "T: Luchtfoto transparant",
-	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:28992/{z}/{x}/{y}.jpeg',{
+	layer: L.tileLayer('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_orthoHR/EPSG:28992/{z}/{x}/{y}.jpeg',{
 		opacity: 0.55,
 		attribution: 'Kaartgegevens &copy; <a href="https://www.kadaster.nl">Kadaster</a>'
 	}),
