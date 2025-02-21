@@ -56,7 +56,7 @@
  
 <script>
 // Define the layers to be used (set in other js files)
-const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, Openbasis, NatSys, FysGeo, Bodem, Geomorf, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, RWZIs, DrinkW, DWBedrijven, DW_GWB, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
+const lagenlijst = [GrWS, Prov, GemMetLab, VRenLab, RWSdis, GrRWSKwan, LuFo, LabGeb, LabHoog, AHN3, Openbasis, NatSys, FysGeo, Bodem, Geomorf, LGN, KrwGw, Wateraanvoer, KasEtc, stuwentot, gemalenWS, RWZIs, DrinkW, DWBedrijven, DW_GWB, SPI1, SPI3, SPI6, N2000, NatCat1, NNN, Wetlands, NatGW_gevoelig, svk_keer, KerPrim, KerWS, KerRWSreg, WBerging, InunMid, InunMax, Water70mm, Bevaar, sluizenrws, Sluizen, MGD, VWkaart];
 const baselayerlist = [BRTw, BRTgr, Topkaarten, LuFoW, NoBase]
 var lagenaan = [];
 
@@ -140,6 +140,7 @@ lagenaan.forEach(laag => map.addLayer(laag));
 		[NNN.name] : NNN.layer,	
 		[Wetlands.name] : Wetlands.layer,
 		[NatGW_gevoelig.name] : NatGW_gevoelig.layer,
+		[LGN.name] : LGN.layer,
 		[KasEtc.name] : KasEtc.layer,
 		[Wateraanvoer.name]: Wateraanvoer.layer,
 		[DrinkW.name] : DrinkW.layer,
