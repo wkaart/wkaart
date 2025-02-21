@@ -318,7 +318,16 @@ const Geomorf = {
 		format: 'image/png'
 	}),
 };
-
+const LGN = {
+	id: 'LGN',
+	name: "<h style='color:red;'>L: LGN2023 <a target='_blank' href='https://service.pdok.nl/wur/lgn/wms/v1_0/legend/LGN2023/default.png'>(L)</a> <a target='_blank' href='https://lgn.nl/'>(i)</a>",
+	layer: L.tileLayer.wms('https://service.pdok.nl/wur/lgn/wms/v1_0',{
+		layers: 'LGN2023',
+		transparent: 'true',
+		opacity: 0.5,
+		format: 'image/png'
+	}),
+};
 var imageBounds = [[53.59111, 3.19734], [50.67647, 7.15560]];
 const KasEtc = {
 	id: 'KasEtc',
@@ -595,8 +604,8 @@ const Water70mm = {
 const Bevaar = {
 	id: 'Bevaar',
 	name: "<h style='color:orange;'>Vw: Bevaarbaarheid <a target='_blank' href='Images/Legenda_bevaarbaarheid.png'>(L)</a> <a target='_blank' href='https://www.pdok.nl/introductie/-/article/vaarweg-netwerk-data-service-vnds' >(i)</a>",
-    layer: L.tileLayer.wms('https://service.pdok.nl/rws/vnds/wms/v1_0',{
-		layers: 'l_bevaarbaarheid', 
+    layer: L.tileLayer.wms('https://service.pdok.nl/rws/vnds/wms/v2_0',{
+		layers: 'l_navigability', 
 		minZoom: 1,
 		maxZoom: 19,   
 		transparent: 'true',
