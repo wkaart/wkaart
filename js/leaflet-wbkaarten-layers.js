@@ -515,10 +515,9 @@ const KerRWSreg = {
 };
 const KerPrim = {
 	id: 'KerPrim',
-	name: "<h style='color:red;'>V: Keringen primair (sign.) <a target='_blank' href='https://waterveiligheidsportaal.nl/#/nss/nss/norm'>(i)</a>",
-    layer: L.tileLayer.wms('https://waterveiligheidsportaal.nl/geoserver/nbpw/ows?SERVICE=WMS&',{
-		layers: 'dijktrajecten', 
-		style: 'NBPW_signaleringswaarde',
+	name: "<h style='color:red;'>V: Keringen primair <a target='_blank' href='https://waterveiligheidsportaal.nl/nss/norm'>(i)</a>",
+    layer: L.tileLayer.wms('https://geo.rijkswaterstaat.nl/services/ogc/wvp/ows/wms?',{
+		layers: 'wvp:dijktrajecten', 
 		version: '1.3.0',
 		minZoom: 1,
 		maxZoom: 19,   
