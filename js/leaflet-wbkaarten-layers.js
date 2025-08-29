@@ -320,9 +320,9 @@ const Geomorf = {
 };
 const LGN = {
 	id: 'LGN',
-	name: "<h style='color:red;'>L: LGN2023 <a target='_blank' href='https://service.pdok.nl/wur/lgn/wms/v1_0/legend/LGN2023/default.png'>(L)</a> <a target='_blank' href='https://lgn.nl/'>(i)</a>",
-	layer: L.tileLayer.wms('https://service.pdok.nl/wur/lgn/wms/v1_0',{
-		layers: 'LGN2023',
+	name: "<h style='color:red;'>L: LGN <a target='_blank' href='https://service.pdok.nl/wur/landelijk-grondgebruik-nederland/wms/v1_0/legend/lgn-actueel/default.png'>(L)</a> <a target='_blank' href='https://lgn.nl/'>(i)</a>",
+	layer: L.tileLayer.wms('https://service.pdok.nl/wur/landelijk-grondgebruik-nederland/wms/v1_0',{
+		layers: 'lgn-actueel',
 		transparent: 'true',
 		opacity: 0.5,
 		format: 'image/png'
