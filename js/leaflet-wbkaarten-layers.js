@@ -167,14 +167,14 @@ const GemMetLab = {
 	name: '<i>G: Gemeenten',
 	layer: L.layerGroup([gem, gem_labels]),
 };
-//Waterschappen van Geodan/Klimaateffectatlas omdat grenzen van Waterschapshuis via PDOK en nationaalgeoregister sinds 1 dec 2023 niet meer goed gepresenteerd worden
+//Waterschappen grenzen van Waterschapshuis
 const GrWS = {
 	id: 'GrWS',
 	name: '<i>G: Waterschappen',
-	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
-		layers: 'Waterschapsgrenzen',
+	layer: L.tileLayer.wms('https://service.pdok.nl/hwh/waterschappen-waterschapsgrenzen-imso/wms/v2_0?',{
+		layers: 'waterschap',
 		transparent: 'true',
-		opacity: 0.8,
+		opacity: 0.65,
 		format: 'image/png'
 	}),
 };
