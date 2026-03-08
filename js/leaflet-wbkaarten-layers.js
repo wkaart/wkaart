@@ -493,7 +493,7 @@ const Wetlands = {
 const NatGW_gevoelig = {
 	id: 'NatGW_gevoelig',
 	name: "<h style='color:green;'>N: Grondwaterafhankelijke natuur <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/droogtegevoeligheid-natuur'>(i)</a>",
-	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+	layer: L.tileLayer.wms('https://cas.cloud.sogelink.com/public/data/org/gws/YWFMLMWERURF/kea_public/ows?SERVICE=WMS&',{
 		layers: 'droogtegevoeligheidgrondwaterafhankelijkenatuur',
 		transparent: 'true',
 		opacity: 0.7,
