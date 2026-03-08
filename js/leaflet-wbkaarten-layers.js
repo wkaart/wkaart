@@ -592,7 +592,7 @@ const InunMax = {
 const Water70mm = {
 	id: 'Water70mm',
 	name: "<h style='color:red;'>V: Waterdiepte 70mm/2uur <a target='_blank' href='https://www.klimaateffectatlas.nl/nl/waterdiepte-bij-kortdurende-hevige-neerslag'>(i)</a>",
-	layer: L.tileLayer.wms('https://apps.geodan.nl/public/data/org/gws/YWFMLMWERURF/kea_public/wms?',{
+	layer: L.tileLayer.wms('https://cas.cloud.sogelink.com/public/data/org/gws/YWFMLMWERURF/kea_public/ows?SERVICE=WMS&',{
 		layers: 'waterdiepte_neerslag_70mm_2uur',
 		transparent: 'true',
 		opacity: 0.7,
