@@ -498,7 +498,7 @@ const NatGW_gevoelig = {
 		transparent: 'true',
 		opacity: 0.7,
 		format: 'image/png',
-		attribution: 'Klimaateffectatlas 2022'
+		attribution: 'Klimaateffectatlas 2025'
 	}),
 };
 //Layers voor waterveiligheid
@@ -597,7 +597,7 @@ const Water70mm = {
 		transparent: 'true',
 		opacity: 0.7,
 		format: 'image/png',
-		attribution: 'Klimaateffectatlas 2022'
+		attribution: 'Klimaateffectatlas 2025'
 	}),
 };
 //Lagen voor vaarwegen
